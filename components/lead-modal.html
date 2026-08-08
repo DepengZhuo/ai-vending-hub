@@ -1,0 +1,82 @@
+<div id="lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" aria-hidden="true" role="dialog" aria-modal="true">
+  <!-- Backdrop: click to close -->
+  <div class="absolute inset-0 bg-[#0b1220]/70 backdrop-blur-sm" data-modal-close></div>
+
+  <!-- Modal body -->
+  <div data-modal-body class="relative w-full max-w-xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl sm:p-7">
+    <!-- Close -->
+    <button type="button" data-modal-close
+            class="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+            aria-label="Close">
+      <i class="fa-solid fa-xmark text-lg"></i>
+    </button>
+
+    <span class="chip">Talk to us</span>
+    <h2 class="mt-2.5 text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">Book a Demo</h2>
+    <p class="mt-1.5 text-sm leading-6 text-gray-600">
+      Tell us about your project — we'll reply within one business day.
+    </p>
+
+    <form id="lead-form" data-lead-form data-formspree-id="mgogqyoa"
+          class="mt-5 space-y-3" action="https://formspree.io/f/mgogqyoa" method="POST">
+
+      <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+      <input type="hidden" name="_subject" value="Book a Demo / Contact Us - AI Vending Hub" />
+
+      <div data-fs-success class="hidden rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700">
+        Thanks! We will get back to you within 1 business day.
+      </div>
+      <div data-fs-error class="hidden rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600"></div>
+
+      <div class="grid gap-3 sm:grid-cols-2">
+        <div>
+          <label for="lead-name" class="field-label">Name *</label>
+          <input id="lead-name" type="text" name="name" data-fs-field required class="field-input field-input-sm" placeholder="Jane Cooper" />
+        </div>
+        <div>
+          <label for="lead-email" class="field-label">Work Email *</label>
+          <input id="lead-email" type="email" name="email" data-fs-field required class="field-input field-input-sm" placeholder="jane@company.com" />
+          <span data-fs-error="email" class="mt-1 block text-xs text-red-600"></span>
+        </div>
+      </div>
+
+      <div class="grid gap-3 sm:grid-cols-2">
+        <div>
+          <label for="lead-company" class="field-label">Company</label>
+          <input id="lead-company" type="text" name="company" data-fs-field class="field-input field-input-sm" placeholder="Company name" />
+        </div>
+        <div>
+          <label for="lead-interest" class="field-label">I'm interested in</label>
+          <select id="lead-interest" name="interest" data-fs-field class="field-input field-input-sm">
+            <option value="demo">Book a Demo</option>
+            <option value="quote">Get a Quote</option>
+            <option value="partnership">Partnership</option>
+            <option value="media">Media / Editorial</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="lead-message" class="field-label">How can we help? *</label>
+        <textarea id="lead-message" name="message" data-fs-field required rows="2" class="field-input field-input-sm" placeholder="Location, product mix, volume..."></textarea>
+        <span data-fs-error="message" class="mt-1 block text-xs text-red-600"></span>
+      </div>
+
+      <label class="flex items-start gap-2.5 text-xs leading-5 text-gray-500">
+        <input type="checkbox" name="consent" value="yes" required
+               class="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-300 text-primary focus:ring-primary" />
+        <span>I agree to the <a href="/privacy.html" class="font-semibold text-gray-700 underline hover:text-primary">Privacy Policy</a> and <a href="/terms.html" class="font-semibold text-gray-700 underline hover:text-primary">Terms of Use</a>.</span>
+      </label>
+
+      <button type="submit" data-fs-submit-btn class="btn-primary w-full !py-3">
+        <i class="fa-solid fa-paper-plane"></i> Submit
+      </button>
+
+      <div class="modal-note justify-center">
+        <span><i class="fa-solid fa-circle-check"></i> No spam, ever</span>
+        <span><i class="fa-solid fa-bolt"></i> Reply within 1 business day</span>
+        <span><i class="fa-solid fa-lock"></i> We never sell your data</span>
+      </div>
+    </form>
+  </div>
+</div>

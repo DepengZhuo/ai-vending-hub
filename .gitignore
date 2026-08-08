@@ -1,0 +1,16 @@
+# 系统 / 编辑器垃圾文件（可以放心忽略，不影响网站）
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.log
+
+# 本地编辑器配置
+.vscode/
+.idea/
+
+# 注意：assets/、components/、所有 .html、sitemap.xml、robots.txt、
+# feed.xml、search-index.json、README.md 都要正常上传，不要忽略。
+
+# 本地 API Key（绝不上传）
+work/ark_key.txt
+work/ark_model.txt

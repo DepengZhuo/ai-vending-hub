@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Company Directory</title>
+  <meta name="description" content="Neutral profiles of the companies building AI vending hardware, smart coolers, and unattended retail platforms." />
+  <meta property="og:type" content="CollectionPage" />
+  <meta property="og:title" content="Company Directory" />
+  <meta property="og:description" content="Neutral profiles of the companies building AI vending hardware, smart coolers, and unattended retail platforms." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* 全站色板：参考方案配色（primary #165dff / accent #10b981 / slate 灰阶） */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">{"@type": "CollectionPage", "name": "Company Directory", "description": "Neutral profiles of the companies building AI vending hardware, smart coolers, and unattended retail platforms."}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="../">
+<!-- ===== 导航栏（全站公共组件，由 assets/js/include.js 注入 components/nav.html）===== -->
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <!-- ===== 列表页 Hero 区块：标题 + 说明 + 配图 ===== -->
+    
+    <!-- ===== Listing hero: editorial split ===== -->
+    <section class="grid-pattern border-b border-gray-100">
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-12 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-20 lg:pt-16">
+        <div>
+          <nav class="font-mono text-xs uppercase tracking-wider text-gray-400" aria-label="Breadcrumb">
+            <ol class="flex flex-wrap items-center gap-2">
+              <li class="truncate text-gray-600">Company Directory</li>
+            </ol>
+          </nav>
+          <p class="section-kicker mt-4">Who's who</p>
+          <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">Company Directory</h1>
+          <p class="mt-5 max-w-xl text-lg leading-8 text-gray-600">Neutral profiles of the companies building AI vending hardware, smart coolers, and unattended retail platforms.</p>
+          <p class="mt-5 flex flex-wrap items-center gap-x-2 font-mono text-xs uppercase tracking-wider text-gray-400"><i class="fa-solid fa-circle-check text-primary"></i>9 profiles · Written for buyers</p>
+        </div>
+        <div class="hero-media img-frame aspect-[16/10] shadow-[0_20px_56px_rgba(15,23,42,0.12)]">
+          <img src="../assets/images/shared/company-directory-retail-logos-b714f5.webp" alt="Company Directory" class="h-full w-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 内容卡片网格：每张卡片链接到详情页 ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><a href="../companies/micromart.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/smart-micro-store-cooler-building-bd050f.webp" alt="Micromart" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Micromart</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Autonomous smart micro-stores for busy buildings</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">North America (HQ New York)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/365-retail-markets.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/micro-market-kiosk-payment-d37093.webp" alt="365 Retail Markets" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">365 Retail Markets</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Micro markets, kiosks, and AI smart coolers for unattended retail</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">North America (HQ Troy, Michigan)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/vendera.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/smart-cooler-card-payment-bb5d7c.webp" alt="Vendera" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Vendera</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI smart coolers built for simplicity</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">United States</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/xmai.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/ai-vending-machine-cloud-dashboard-b295ae.webp" alt="XMAI Vending" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">XMAI Vending</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI vending machines and smart coolers with cloud management</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Global (China-based, expanding in North America)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/qingo.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/smart-vending-cabinet-scan-open-4b9f40.webp" alt="QINGO (Wuhan Qinggouyun Technology)" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">QINGO (Wuhan Qinggouyun Technology)</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Smart self-serve cabinets with RFID and vision</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">China (Wuhan), expanding internationally</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/sandstar.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/ai-retail-kiosk-edge-vision-589033.webp" alt="SandStar" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">SandStar</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI vending machines and AI store solutions with edge computer vision</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Global (HQ China)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/tcn.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/vending-machine-factory-catalog-9c2d7f.webp" alt="TCN Vending Machine" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">TCN Vending Machine</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Broad vending catalog with AI smart fridges and coolers</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Global (HQ Shenzhen, China)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/haha.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/ai-smart-fridge-vending-machine-b6276f.webp" alt="Haha Vending" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Haha Vending</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI smart vending machines and smart fridges for global unattended retail</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Global (HQ China; US, UK, Europe, Singapore)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a><a href="../companies/grabot.html" class="card group flex items-center gap-4 p-4">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="../assets/images/shared/ai-smart-cooler-edge-ai-7d4968.webp" alt="Grabot" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Grabot</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI smart coolers with on-device computer vision</p>
+        <p class="mt-2 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Global (China-based, exhibited at CAMA)</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a></div>
+    </section>
+    
+    <!-- ===== 转化 CTA 区块：Book a Demo 按钮弹全站 Lead 弹窗 ===== -->
+      
+            <!-- ===== Conversion CTA: compact card with page-specific copy ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-12 sm:px-10 lg:px-14 lg:py-14">
+        <div class="grid-pattern absolute inset-0 opacity-40"></div>
+        <div class="relative grid items-center gap-7 lg:grid-cols-[1.15fr_auto]">
+          <div>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-blue-300">Compare before you commit</p>
+            <h2 class="mt-2.5 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Want a vendor shortlist for your project?</h2>
+            <p class="mt-2.5 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Tell us your volume and requirements — we'll connect you with verified vendors.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
+            <button type="button" data-open-modal class="btn-white !py-3"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+            <a href="../reviews/" class="btn-light-outline">Read our comparisons <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+<!-- ===== 页脚（全站公共组件，由 include.js 注入 components/footer.html）===== -->
+  <div id="footer-placeholder"></div>
+<!-- ===== Lead 弹窗（全站公共组件，由 include.js 注入 components/lead-modal.html）===== -->
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="../assets/js/include.js" defer></script>
+  <script src="../assets/js/modal.js" defer></script>
+  <script src="../assets/js/forms.js" defer></script>
+  
+</body>
+</html>

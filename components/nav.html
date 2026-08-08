@@ -1,0 +1,76 @@
+<!-- ============================================================
+     Shared component: site navigation (nav.html)
+     Injected by assets/js/include.js into <div id="nav-placeholder">.
+     Edit links below to update the menu site-wide.
+     Note:
+     - Links start with "/" (root-relative); include.js rewrites them
+       to relative paths for the current page depth.
+     - Book a Demo uses data-open-modal -> opens the shared Lead modal.
+     ============================================================ -->
+
+<!-- Announcement bar: site-wide updates (edit here to change everywhere) -->
+<div class="announcement-bar bg-[#0b1220] text-white">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2 text-[0.8rem] sm:px-6 lg:px-8">
+    <p class="min-w-0 truncate">
+      <span class="font-mono text-[0.68rem] font-semibold uppercase tracking-wider text-blue-300">New</span>
+      <a href="/reports/2026-smart-retail-trends.html" class="ml-2 font-medium text-gray-200 hover:text-white">
+        2026 Smart Retail Trends — now live
+      </a>
+    </p>
+    <a href="/resources/roi-calculator.html" class="hidden shrink-0 font-semibold text-blue-200 hover:text-white sm:inline">
+      ROI Calculator <i class="fa-solid fa-arrow-right ml-1 text-[0.7rem]"></i>
+    </a>
+  </div>
+</div>
+
+<header id="site-header" class="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/90 backdrop-blur-md">
+  <nav class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:h-[72px] lg:px-8" aria-label="Main navigation">
+
+    <!-- Brand -->
+    <a href="/" class="flex shrink-0 items-center gap-2.5" aria-label="AI Vending Hub home">
+      <span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary text-white shadow-[0_6px_18px_rgba(22,93,255,0.35)]">
+        <i class="fa-solid fa-cube"></i>
+      </span>
+      <span class="text-lg font-bold tracking-tight text-gray-900">AI Vending Hub</span>
+    </a>
+
+    <!-- Desktop nav: one line -->
+    <div class="hidden items-center gap-1 text-[0.9rem] font-medium text-gray-600 xl:flex">
+      <a href="/" class="nav-link transition" data-nav="/">Home</a>
+      <a href="/news/" class="nav-link transition" data-nav="/news/">News</a>
+      <a href="/knowledge/" class="nav-link transition" data-nav="/knowledge/">Knowledge Base</a>
+      <a href="/reviews/" class="nav-link transition" data-nav="/reviews/">Reviews</a>
+      <a href="/companies/" class="nav-link transition" data-nav="/companies/">Companies</a>
+      <a href="/deployment-guides/" class="nav-link transition" data-nav="/deployment-guides/">Guides</a>
+      <a href="/resources/" class="nav-link transition" data-nav="/resources/">Resources</a>
+    </div>
+
+    <!-- Right: CTA + mobile toggle -->
+    <div class="flex items-center gap-2.5">
+      <button type="button" data-open-modal class="btn-primary hidden !py-2.5 text-sm md:inline-flex">
+        <i class="fa-solid fa-calendar-check"></i> Book a Demo
+      </button>
+      <button id="nav-toggle" type="button"
+              class="flex h-10 w-10 items-center justify-center rounded-[10px] text-gray-700 hover:bg-gray-100 xl:hidden"
+              aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="border-t border-gray-100 bg-white px-4 text-[0.95rem] font-medium text-gray-700 xl:hidden">
+    <a href="/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Home</a>
+    <a href="/news/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">News</a>
+    <a href="/knowledge/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Knowledge Base</a>
+    <a href="/reviews/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Reviews</a>
+    <a href="/companies/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Companies</a>
+    <a href="/deployment-guides/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Guides</a>
+    <a href="/resources/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Resources</a>
+    <div class="border-t border-gray-100 pt-3">
+      <button type="button" data-open-modal class="btn-primary w-full">
+        <i class="fa-solid fa-calendar-check"></i> Book a Demo
+      </button>
+    </div>
+  </div>
+</header>

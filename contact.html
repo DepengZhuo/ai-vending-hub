@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <meta name="description" content="Media inquiries, partnerships, corrections, or demo requests." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact" />
+  <meta property="og:description" content="Media inquiries, partnerships, corrections, or demo requests." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* 全站色板：参考方案配色（primary #165dff / accent #10b981 / slate 灰阶） */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">{"@type": "ContactPage", "name": "Contact"}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="">
+<!-- ===== 导航栏（全站公共组件，由 assets/js/include.js 注入 components/nav.html）===== -->
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <section class="bg-gradient-to-b from-blue-50 to-white">
+      <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+        <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">Contact</h1>
+        <p class="mt-4 text-lg text-gray-600">Media inquiries, partnerships, corrections, or demo requests, pick the button that fits.</p>
+      </div>
+    </section>
+    <section class="mx-auto max-w-5xl px-4 py-16 sm:px-6">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div>
+          <h2 class="text-2xl font-extrabold text-gray-900">Ways to reach us</h2>
+          <ul class="mt-6 space-y-4 text-gray-600">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-calendar-check text-blue-500"></i> Book a product demo (instant form on the right).</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-blue-500"></i> Editorial &amp; corrections: <a href="mailto:editors@aivendinghub.com" class="font-semibold text-gray-900 hover:text-primary">editors@aivendinghub.com</a></li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-handshake text-blue-500"></i> Partnerships: <a href="mailto:partnerships@aivendinghub.com" class="font-semibold text-gray-900 hover:text-primary">partnerships@aivendinghub.com</a></li>
+          </ul>
+          <button type="button" data-open-modal class="btn-outline mt-8"><i class="fa-solid fa-calendar-check"></i> Open demo popup</button>
+        </div>
+        <div>
+          <!-- ===== 联系表单：与 Lead 弹窗字段一致，提交走 Formspree ===== -->
+          <form id="contact-form" data-lead-form data-formspree-id="mgogqyoa" class="card space-y-4 p-6"
+                action="https://formspree.io/f/mgogqyoa" method="POST">
+            <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="Contact Us - AI Vending Hub" />
+            <div data-fs-success class="hidden rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700">Thanks! We'll be in touch within 1 business day.</div>
+            <div data-fs-error class="hidden rounded-lg bg-red-50 px-3 py-2 text-sm text-red-600"></div>
+            <div><label for="c-name" class="field-label">Name *</label><input id="c-name" type="text" name="name" data-fs-field required class="field-input" /></div>
+            <div><label for="c-email" class="field-label">Work Email *</label><input id="c-email" type="email" name="email" data-fs-field required class="field-input" /><span data-fs-error="email" class="mt-1 block text-xs text-red-600"></span></div>
+            <div><label for="c-company" class="field-label">Company</label><input id="c-company" type="text" name="company" data-fs-field class="field-input" /></div>
+            <div><label for="c-message" class="field-label">Message *</label><textarea id="c-message" name="message" data-fs-field required rows="4" class="field-input"></textarea><span data-fs-error="message" class="mt-1 block text-xs text-red-600"></span></div>
+            <label class="flex items-start gap-2.5 text-xs leading-5 text-gray-500">
+              <input type="checkbox" name="consent" value="yes" required class="mt-0.5 h-4 w-4 shrink-0 rounded border-gray-300 text-primary focus:ring-primary" />
+              <span>I agree to the <a href="privacy.html" class="font-semibold text-gray-700 underline hover:text-primary">Privacy Policy</a> and <a href="terms.html" class="font-semibold text-gray-700 underline hover:text-primary">Terms of Use</a>.</span>
+            </label>
+            <button type="submit" data-fs-submit-btn class="btn-primary w-full"><i class="fa-solid fa-paper-plane"></i> Send message</button>
+            <p class="text-center text-xs text-gray-400">We only use your details to follow up on your inquiry. See our <a href="privacy.html" class="text-gray-600 underline hover:text-primary">Privacy Policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<!-- ===== 页脚（全站公共组件，由 include.js 注入 components/footer.html）===== -->
+  <div id="footer-placeholder"></div>
+<!-- ===== Lead 弹窗（全站公共组件，由 include.js 注入 components/lead-modal.html）===== -->
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="assets/js/include.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  
+</body>
+</html>

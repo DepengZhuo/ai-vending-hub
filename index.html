@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vending Hub - The Independent Resource for Smart Retail &amp; AI Vending</title>
+  <meta name="description" content="Plain-English guides, neutral comparisons, and market intelligence for operators, investors, and venue owners planning unattended retail." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AI Vending Hub - The Independent Resource for Smart Retail &amp; AI Vending" />
+  <meta property="og:description" content="Plain-English guides, neutral comparisons, and market intelligence for operators, investors, and venue owners planning unattended retail." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* Site-wide palette: single blue accent (#165dff) on white, slate grays. */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "AI Vending Hub", "description": "The Independent Resource for Smart Retail & AI Vending", "publisher": {"@type": "Organization", "name": "AI Vending Hub"}}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="">
+<!-- ===== Nav (shared component, injected by include.js) ===== -->
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <!-- ===== Hero: asymmetric editorial split ===== -->
+    <section class="grid-pattern border-b border-gray-100">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pb-24 lg:pt-20">
+        <div class="reveal">
+          <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary">Smart Retail &amp; AI Vending · Independent media</p>
+          <h1 class="mt-4 text-[2.6rem] font-extrabold leading-[1.04] tracking-tight text-gray-900 sm:text-6xl lg:text-[4.2rem]">
+            The independent guide to <span class="text-primary">unattended retail</span>
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-8 text-gray-600">
+            Plain-English explainers, neutral comparisons, and market intelligence
+            for operators and venue owners planning their next deployment.
+          </p>
+          <div class="mt-8 flex flex-col gap-3.5 sm:flex-row">
+            <a href="knowledge/" class="btn-primary btn-lg"><i class="fa-solid fa-book-open"></i> Start with the Basics</a>
+            <button type="button" data-open-modal class="btn-outline btn-lg"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+          </div>
+          <p class="mt-6 flex flex-wrap items-center gap-x-2 font-mono text-xs uppercase tracking-wider text-gray-400"><i class="fa-solid fa-circle-check text-primary"></i>Updated weekly · 45+ guides · 9 vendor profiles</p>
+        </div>
+        <div class="reveal relative" data-delay="2">
+          <div class="hero-media img-frame aspect-[16/10] shadow-[0_24px_64px_rgba(15,23,42,0.14)]">
+            <img src="assets/images/shared/ai-vending-machine-modern-cafe-56fd6a.webp" alt="AI vending machine with computer vision in a modern cafe" class="h-full w-full object-cover" />
+          </div>
+          <div class="absolute -bottom-5 -left-5 hidden rounded-2xl border border-gray-100 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.12)] sm:block">
+            <p class="font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-gray-400">Format to watch</p>
+            <p class="mt-1 text-sm font-bold text-gray-900">Vision-enabled smart coolers</p>
+            <p class="mt-0.5 text-xs text-gray-500">The fastest-growing AI vending form factor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Stats strip ===== -->
+    <section class="border-b border-gray-100 bg-gray-50">
+      <div class="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden px-4 sm:px-6 lg:grid-cols-4 lg:px-8">
+        <div class="bg-gray-50 py-8 pr-6">
+          <p class="text-3xl font-extrabold tracking-tight text-gray-900">45+</p>
+          <p class="mt-1 text-sm text-gray-500">Guides and explainers</p>
+        </div>
+        <div class="bg-gray-50 py-8 pr-6">
+          <p class="text-3xl font-extrabold tracking-tight text-gray-900">6</p>
+          <p class="mt-1 text-sm text-gray-500">Venue deployment guides</p>
+        </div>
+        <div class="bg-gray-50 py-8 pr-6">
+          <p class="text-3xl font-extrabold tracking-tight text-gray-900">9</p>
+          <p class="mt-1 text-sm text-gray-500">Vendor profiles, neutral</p>
+        </div>
+        <div class="bg-gray-50 py-8 pr-6">
+          <p class="text-3xl font-extrabold tracking-tight text-gray-900">100%</p>
+          <p class="mt-1 text-sm text-gray-500">Independent editorial</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest news: featured + compact list ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Latest</p>
+          <h2 class="section-title">Industry news</h2>
+          <p class="section-sub">Company moves, pilots, and technology shifts across smart retail and AI vending.</p>
+        </div>
+        <a href="news/" class="link-arrow hidden shrink-0 sm:inline-flex">All news <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+        <!-- Featured -->
+        <a href="news/amazon-go-expansion.html" class="article-card group reveal">
+          <div class="thumb">
+            <img src="assets/images/shared/frictionless-store-entrance-turnstiles-fd965c.webp" alt="Amazon Go's Frictionless Push Keeps Reshaping Small-Format Retail" loading="lazy" />
+          </div>
+          <div class="body">
+            <span class="chip">Featured</span>
+            <h3>Amazon Go's Frictionless Push Keeps Reshaping Small-Format Retail</h3>
+            <p class="summary">Amazon keeps iterating on checkout-free small-format stores, and every move resets expectations for speed, labor, and loss prevention in unattended retail.</p>
+            <p class="meta">August 2026 · 4 min read</p>
+          </div>
+        </a>
+
+        <!-- Compact list -->
+        <div class="flex flex-col divide-y divide-gray-200 border-y border-gray-200">
+          <a href="news/circle-k-frictionless.html" class="group flex items-start gap-4 py-5">
+            <div class="h-20 w-28 shrink-0 overflow-hidden rounded-xl border border-gray-100 bg-gray-50">
+              <img src="assets/images/shared/convenience-store-cashierless-checkout-e894c6.webp" alt="" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div>
+              <h3 class="text-[0.98rem] font-bold leading-snug text-gray-900 transition group-hover:text-primary">Circle K Widens Checkout-Free Pilots Across Convenience Stores</h3>
+              <p class="mt-1.5 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Aug 2026 · 4 min</p>
+            </div>
+          </a>
+          <a href="news/7-eleven-checkout-free.html" class="group flex items-start gap-4 py-5">
+            <div class="h-20 w-28 shrink-0 overflow-hidden rounded-xl border border-gray-100 bg-gray-50">
+              <img src="assets/images/shared/convenience-store-smart-shelves-a86a57.webp" alt="" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div>
+              <h3 class="text-[0.98rem] font-bold leading-snug text-gray-900 transition group-hover:text-primary">7-Eleven Tests Computer Vision Checkout in More US Stores</h3>
+              <p class="mt-1.5 font-mono text-[0.68rem] uppercase tracking-wider text-gray-400">Aug 2026 · 4 min</p>
+            </div>
+          </a>
+          <a href="news/" class="group flex items-center justify-between py-5">
+            <span class="text-sm font-semibold text-gray-700 transition group-hover:text-primary">Browse all news briefs</span>
+            <i class="fa-solid fa-arrow-right text-sm text-gray-400 transition group-hover:text-primary"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Knowledge Base: bento grid ===== -->
+    <section class="border-y border-gray-100 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Learn the basics</p>
+            <h2 class="section-title">Knowledge base</h2>
+            <p class="section-sub">Start here if you are new to AI vending. These pages stay useful for years.</p>
+          </div>
+          <a href="knowledge/" class="link-arrow hidden shrink-0 sm:inline-flex">All guides <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="grid grid-flow-dense gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="knowledge/what-is-ai-vending.html" class="article-card group reveal sm:col-span-2 lg:row-span-2">
+            <div class="thumb h-full min-h-[220px]">
+              <img src="assets/images/shared/ai-vending-machine-glass-door-1d4fac.webp" alt="What Is AI Vending?" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Basics</span>
+              <h3 class="text-xl">What Is AI Vending?</h3>
+              <p class="summary">AI vending is unattended retail where computer vision identifies what a customer takes and charges automatically. No dials, coils, or cash drawers.</p>
+              <p class="meta">Updated August 2026 · 6 min read</p>
+            </div>
+          </a>
+
+          <a href="knowledge/what-is-smart-cooler.html" class="article-card group reveal">
+            <div class="thumb">
+              <img src="assets/images/shared/smart-cooler-grab-and-go-21ef96.webp" alt="What Is a Smart Cooler?" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Form factor</span>
+              <h3>What Is a Smart Cooler?</h3>
+              <p class="meta">5 min read</p>
+            </div>
+          </a>
+
+          <a href="knowledge/what-is-computer-vision.html" class="article-card group reveal">
+            <div class="thumb">
+              <img src="assets/images/shared/computer-vision-retail-shelf-camera-a5eed2.webp" alt="What Is Computer Vision in Retail?" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Technology</span>
+              <h3>What Is Computer Vision in Retail?</h3>
+              <p class="meta">6 min read</p>
+            </div>
+          </a>
+
+          <a href="knowledge/cashless-vs-cash-vending.html" class="article-card group reveal">
+            <div class="thumb">
+              <img src="assets/images/shared/cashless-payment-vending-card-c1dbca.webp" alt="Cashless vs. Cash Vending" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Economics</span>
+              <h3>Cashless vs. Cash Vending: What Actually Matters</h3>
+              <p class="meta">5 min read</p>
+            </div>
+          </a>
+
+          <a href="knowledge/what-is-grab-and-go.html" class="article-card group reveal">
+            <div class="thumb">
+              <img src="assets/images/shared/grab-and-go-retail-fridge-fb11ea.webp" alt="What Is Grab-and-Go Retail?" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Experience</span>
+              <h3>What Is Grab-and-Go Retail?</h3>
+              <p class="meta">5 min read</p>
+            </div>
+          </a>
+
+          <a href="knowledge/what-is-a-micro-market.html" class="article-card group reveal">
+            <div class="thumb">
+              <img src="assets/images/shared/micro-market-self-checkout-16b5f3.webp" alt="What Is a Micro Market?" loading="lazy" />
+            </div>
+            <div class="body">
+              <span class="chip">Formats</span>
+              <h3>What Is a Micro Market?</h3>
+              <p class="meta">6 min read</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Reviews & comparisons: editorial row ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Decide</p>
+          <h2 class="section-title">Reviews &amp; comparisons</h2>
+          <p class="section-sub">Neutral side-by-sides. We do not sell hardware, so we do not take sides.</p>
+        </div>
+        <a href="reviews/" class="link-arrow hidden shrink-0 sm:inline-flex">All reviews <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <a href="reviews/ai-vending-vs-spiral-vending.html" class="article-card group reveal">
+          <div class="thumb">
+            <img src="assets/images/shared/vending-machine-comparison-29e29e.webp" alt="AI Vending vs. Spiral Vending" loading="lazy" />
+          </div>
+          <div class="body">
+            <span class="chip">Formats</span>
+            <h3>AI Vending vs. Spiral Vending: Which Fits Your Operation?</h3>
+            <p class="meta">7 min read</p>
+          </div>
+        </a>
+        <a href="reviews/smart-cooler-vs-traditional-cooler.html" class="article-card group reveal">
+          <div class="thumb">
+            <img src="assets/images/shared/glass-door-cooler-store-def74c.webp" alt="Smart Cooler vs. Traditional Cooler" loading="lazy" />
+          </div>
+          <div class="body">
+            <span class="chip">Hardware</span>
+            <h3>Smart Cooler vs. Traditional Cooler: What You Actually Gain</h3>
+            <p class="meta">6 min read</p>
+          </div>
+        </a>
+        <a href="reviews/haha-vs-tcn.html" class="article-card group reveal">
+          <div class="thumb">
+            <img src="assets/images/shared/smart-fridge-vending-machines-820b4c.webp" alt="Haha vs. TCN" loading="lazy" />
+          </div>
+          <div class="body">
+            <span class="chip">Vendors</span>
+            <h3>Haha vs. TCN: Two Routes to AI Vending</h3>
+            <p class="meta">7 min read</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Company directory: dense rows ===== -->
+    <section class="border-y border-gray-100 bg-gray-50">
+      <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Who's who</p>
+            <h2 class="section-title">Company directory</h2>
+            <p class="section-sub">Profiles of the vendors shaping AI vending, written for buyers, not for marketing.</p>
+          </div>
+          <a href="companies/" class="link-arrow hidden shrink-0 sm:inline-flex">All companies <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="companies/micromart.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/smart-micro-store-cooler-building-bd050f.webp" alt="Micromart" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Micromart</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Autonomous smart micro-stores for busy buildings</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/365-retail-markets.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/micro-market-kiosk-payment-d37093.webp" alt="365 Retail Markets" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">365 Retail Markets</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Micro markets, kiosks, and AI smart coolers</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/vendera.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/smart-cooler-card-payment-bb5d7c.webp" alt="Vendera" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Vendera</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI smart coolers built for simplicity</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/xmai.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/ai-vending-machine-cloud-dashboard-b295ae.webp" alt="XMAI Vending" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">XMAI Vending</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI vending machines with cloud management</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/qingo.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/smart-vending-cabinet-scan-open-4b9f40.webp" alt="QINGO" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">QINGO</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Smart self-serve cabinets with RFID and vision</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/sandstar.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/ai-retail-kiosk-edge-vision-589033.webp" alt="SandStar" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">SandStar</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI vending and store solutions with edge vision</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/tcn.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/vending-machine-factory-catalog-9c2d7f.webp" alt="TCN Vending Machine" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">TCN Vending Machine</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">Broad vending catalog with AI smart fridges</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/haha.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/ai-smart-fridge-vending-machine-b6276f.webp" alt="Haha Vending" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Haha Vending</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI vending machines and smart fridges, global</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+          <a href="companies/grabot.html" class="card group flex items-center gap-4 p-4 reveal">
+      <div class="h-16 w-24 shrink-0 overflow-hidden rounded-[12px] border border-gray-100 bg-gray-50">
+        <img src="assets/images/shared/ai-smart-cooler-edge-ai-7d4968.webp" alt="Grabot" loading="lazy" class="h-full w-full object-cover transition duration-300 group-hover:scale-105" />
+      </div>
+      <div class="min-w-0">
+        <h3 class="truncate font-bold text-gray-900 transition group-hover:text-primary">Grabot</h3>
+        <p class="mt-1 line-clamp-1 text-sm text-gray-500">AI smart coolers with on-device computer vision</p>
+      </div>
+      <i class="fa-solid fa-arrow-right ml-auto shrink-0 text-gray-300 transition group-hover:text-primary"></i>
+    </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Deployment guides: by venue ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">By venue</p>
+          <h2 class="section-title">Deployment guides</h2>
+          <p class="section-sub">How to pick the right product mix, format, and location for six high-traffic venue types.</p>
+        </div>
+        <a href="deployment-guides/" class="link-arrow hidden shrink-0 sm:inline-flex">All guides <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="grid gap-px overflow-hidden rounded-2xl border border-gray-200 bg-gray-200 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="deployment-guides/university.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-graduation-cap text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Universities</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">24/7 foot traffic, peak-hour queues, and students who expect cashless speed.</p>
+        </a>
+        <a href="deployment-guides/hospital.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-hospital text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Hospitals</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">Shift rotations and unpredictable visitor hours beyond cafeteria service.</p>
+        </a>
+        <a href="deployment-guides/airport.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-plane text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Airports</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">High traffic, time pressure, and security-controlled spaces.</p>
+        </a>
+        <a href="deployment-guides/hotel.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-hotel text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Hotels</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">24/7 guest convenience in lobbies, gyms, and pool areas.</p>
+        </a>
+        <a href="deployment-guides/office.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-building text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Offices</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">Break-room convenience that cuts queues and improves satisfaction.</p>
+        </a>
+        <a href="deployment-guides/gym.html" class="group bg-white p-7 transition hover:bg-gray-50 reveal">
+          <i class="fa-solid fa-dumbbell text-lg text-primary"></i>
+          <h3 class="mt-4 text-lg font-bold text-gray-900 transition group-hover:text-primary">Gyms</h3>
+          <p class="mt-2 text-sm leading-6 text-gray-600">Loyal members and predictable post-workout demand.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== FAQ: borderless list ===== -->
+    <section class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="section-head">
+        <div>
+          <p class="section-kicker">Quick answers</p>
+          <h2 class="section-title">Frequently asked questions</h2>
+        </div>
+      </div>
+      <div class="mx-auto max-w-3xl">
+        <details class="faq-item" open>
+          <summary>What is AI Vending Hub?</summary>
+          <p>An independent media site covering smart retail and AI vending: explainers, buyer's guides, comparisons, and a company directory.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do you sell vending machines?</summary>
+          <p>No. We publish neutral industry content and connect readers with verified vendors only when they ask.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Who is this site for?</summary>
+          <p>Operators, venue owners, distributors, and investors researching unattended retail in North America.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get pricing?</summary>
+          <p>Use the Book a Demo popup on any page. Tell us your location, product mix, and volume and we will point you to the right vendors.</p>
+        </details>
+      </div>
+    </section>
+
+            <!-- ===== Conversion CTA: compact card with page-specific copy ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-12 sm:px-10 lg:px-14 lg:py-14">
+        <div class="grid-pattern absolute inset-0 opacity-40"></div>
+        <div class="relative grid items-center gap-7 lg:grid-cols-[1.15fr_auto]">
+          <div>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-blue-300">Planning a deployment</p>
+            <h2 class="mt-2.5 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Not sure where to start with AI vending?</h2>
+            <p class="mt-2.5 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Tell us your venue, product mix, and volume — we'll point you to the right vendors and answer pricing questions.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
+            <button type="button" data-open-modal class="btn-white !py-3"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+            <a href="resources/roi-calculator.html" class="btn-light-outline">Try the ROI Calculator <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+<!-- ===== Footer (shared component) ===== -->
+  <div id="footer-placeholder"></div>
+<!-- ===== Lead modal (shared component) ===== -->
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="assets/js/include.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/search.js" defer></script>
+  <script>
+  /* Scroll reveal: add .in-view when sections enter the viewport. */
+  (function () {
+    if (!("IntersectionObserver" in window)) return;
+    var els = document.querySelectorAll(".reveal");
+    if (!els.length) return;
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    els.forEach(function (el) { io.observe(el); });
+  })();
+  </script>
+</body>
+</html>

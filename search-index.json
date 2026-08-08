@@ -1,0 +1,254 @@
+[
+  {
+    "title": "Amazon Go's Frictionless Push Keeps Reshaping Small-Format Retail",
+    "url": "news/amazon-go-expansion.html",
+    "description": "Amazon keeps iterating on checkout-free small-format stores, and every move resets expectations for speed, labor, and loss prevention in unattended retail.",
+    "section": "News"
+  },
+  {
+    "title": "Circle K Widens Checkout-Free Pilots Across Convenience Stores",
+    "url": "news/circle-k-frictionless.html",
+    "description": "Circle K's expanding pilots show convenience chains are treating frictionless checkout as an operational strategy, not a novelty.",
+    "section": "News"
+  },
+  {
+    "title": "7-Eleven Tests Computer Vision Checkout in More US Stores",
+    "url": "news/7-eleven-checkout-free.html",
+    "description": "7-Eleven's expanded computer-vision tests signal that the world's largest convenience chain is actively de-risking frictionless checkout.",
+    "section": "News"
+  },
+  {
+    "title": "What Is AI Vending?",
+    "url": "knowledge/what-is-ai-vending.html",
+    "description": "AI vending is unattended retail where computer vision (or smart lockers) identifies what a customer takes and charges automatically. No dials, coils, or cash drawers.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is Smart Retail?",
+    "url": "knowledge/what-is-smart-retail.html",
+    "description": "Smart retail uses technology to automate, measure, and personalize physical commerce. AI vending is one of its fastest-growing formats.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is Computer Vision in Retail?",
+    "url": "knowledge/what-is-computer-vision.html",
+    "description": "Computer vision lets cameras identify products and actions. In retail it powers checkout-free stores, AI vending, loss prevention, and shelf analytics.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is Grab-and-Go Retail?",
+    "url": "knowledge/what-is-grab-and-go.html",
+    "description": "Grab-and-go means shoppers take items and get charged automatically. It is the shopper experience behind AI vending, smart coolers, and checkout-free stores.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is a Smart Cooler?",
+    "url": "knowledge/what-is-smart-cooler.html",
+    "description": "A smart cooler is a vision-enabled glass-door fridge that charges shoppers automatically. It is the most popular AI vending form factor today.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is a Micro Market?",
+    "url": "knowledge/what-is-a-micro-market.html",
+    "description": "A micro market is a small unattended store with a self-checkout kiosk. It sells more than vending, but needs more space and a stronger location.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "Cashless vs. Cash Vending: What Actually Matters",
+    "url": "knowledge/cashless-vs-cash-vending.html",
+    "description": "Cashless vending typically lifts sales and lowers collection costs, but the right choice depends on your audience, location, and fee structure.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "What Is Telemetry & IoT in Vending?",
+    "url": "knowledge/what-is-telemetry-in-vending.html",
+    "description": "Telemetry connects vending machines to the cloud: sales, inventory, temperature, and alerts stream to one dashboard, so operators service machines only when needed.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "Smart Locker vs. Smart Cooler: Which Unattended Format Fits?",
+    "url": "knowledge/smart-locker-vs-smart-cooler.html",
+    "description": "Smart lockers excel at controlled, pre-ordered pickup; smart coolers win on browsing and impulse sales. Choose by product, not by hype.",
+    "section": "Knowledge"
+  },
+  {
+    "title": "AI Vending vs. Spiral Vending: Which Fits Your Operation?",
+    "url": "reviews/ai-vending-vs-spiral-vending.html",
+    "description": "Spiral machines are cheap and proven; AI vending sells more and fails less mechanically. The right choice depends on location, products, and budget.",
+    "section": "Reviews"
+  },
+  {
+    "title": "Smart Cooler vs. Traditional Cooler: What You Actually Gain",
+    "url": "reviews/smart-cooler-vs-traditional-cooler.html",
+    "description": "A traditional cooler is just refrigeration. A smart cooler adds vision, payment, and data. The premium makes sense where unattended sales are real.",
+    "section": "Reviews"
+  },
+  {
+    "title": "Haha vs. TCN: Two Routes to AI Vending",
+    "url": "reviews/haha-vs-tcn.html",
+    "description": "Haha and TCN both sell vision-based AI vending hardware but approach the market differently. Compare them on products, tech, and service before choosing.",
+    "section": "Reviews"
+  },
+  {
+    "title": "Nayax vs. Cantaloupe: Payment & Telemetry Platforms Compared",
+    "url": "reviews/nayax-vs-cantaloupe.html",
+    "description": "Nayax and Cantaloupe are the two big payment and telemetry platforms for unattended retail. Both work well; the fit depends on hardware, fees, and region.",
+    "section": "Reviews"
+  },
+  {
+    "title": "AI Vending vs. Micro Market: Which Format Fits Your Location?",
+    "url": "reviews/ai-vending-vs-micro-market.html",
+    "description": "AI vending is a single unit; a micro market is a mini-store. The format decision should follow location traffic and space, not vendor preference.",
+    "section": "Reviews"
+  },
+  {
+    "title": "365 Retail Markets vs. Vistar: Unattended Retail Platforms Compared",
+    "url": "reviews/365-retail-markets-vs-vistar.html",
+    "description": "365 Retail Markets and Vistar both power micro markets and unattended retail. Compare platform breadth, hardware options, and service before choosing.",
+    "section": "Reviews"
+  },
+  {
+    "title": "Micromart",
+    "url": "companies/micromart.html",
+    "description": "Autonomous smart micro-stores for busy buildings",
+    "section": "Companies"
+  },
+  {
+    "title": "365 Retail Markets",
+    "url": "companies/365-retail-markets.html",
+    "description": "Micro markets, kiosks, and AI smart coolers for unattended retail",
+    "section": "Companies"
+  },
+  {
+    "title": "Vendera",
+    "url": "companies/vendera.html",
+    "description": "AI smart coolers built for simplicity",
+    "section": "Companies"
+  },
+  {
+    "title": "XMAI Vending",
+    "url": "companies/xmai.html",
+    "description": "AI vending machines and smart coolers with cloud management",
+    "section": "Companies"
+  },
+  {
+    "title": "QINGO (Wuhan Qinggouyun Technology)",
+    "url": "companies/qingo.html",
+    "description": "Smart self-serve cabinets with RFID and vision",
+    "section": "Companies"
+  },
+  {
+    "title": "SandStar",
+    "url": "companies/sandstar.html",
+    "description": "AI vending machines and AI store solutions with edge computer vision",
+    "section": "Companies"
+  },
+  {
+    "title": "TCN Vending Machine",
+    "url": "companies/tcn.html",
+    "description": "Broad vending catalog with AI smart fridges and coolers",
+    "section": "Companies"
+  },
+  {
+    "title": "Haha Vending",
+    "url": "companies/haha.html",
+    "description": "AI smart vending machines and smart fridges for global unattended retail",
+    "section": "Companies"
+  },
+  {
+    "title": "Grabot",
+    "url": "companies/grabot.html",
+    "description": "AI smart coolers with on-device computer vision",
+    "section": "Companies"
+  },
+  {
+    "title": "AI Vending for Universities",
+    "url": "deployment-guides/university.html",
+    "description": "How to deploy AI vending on university campuses: product selection, placement, and metrics for dorms, libraries, and student centers.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Hospitals",
+    "url": "deployment-guides/hospital.html",
+    "description": "AI vending for hospitals: product selection for staff, visitors, and patients, plus compliance and placement guidance.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Airports",
+    "url": "deployment-guides/airport.html",
+    "description": "AI vending at airports: high-traffic placement, product selection for travelers, and security constraints to plan around.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Hotels",
+    "url": "deployment-guides/hotel.html",
+    "description": "AI vending for hotels: guest-facing product selection, lobby placement, and how to avoid cannibalizing room service.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Offices",
+    "url": "deployment-guides/office.html",
+    "description": "AI vending for offices: product selection for break rooms, employee perks, and measuring adoption in the workplace.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Gyms",
+    "url": "deployment-guides/gym.html",
+    "description": "AI vending for gyms: product selection for fitness members, placement near training areas, and measuring per-member revenue.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "How Much Does AI Vending Cost?",
+    "url": "resources/how-much-does-ai-vending-cost.html",
+    "description": "AI vending costs $6,000 to $15,000 per unit upfront plus $20 to $80 per machine monthly in software, payment, and connectivity fees.",
+    "section": "Resources"
+  },
+  {
+    "title": "How to Start an AI Vending Business",
+    "url": "resources/how-to-start-ai-vending-business.html",
+    "description": "Start with one pilot location, pick hardware for your product mix, and grow from data. This guide walks through the full launch sequence.",
+    "section": "Resources"
+  },
+  {
+    "title": "AI Vending ROI Calculator",
+    "url": "resources/roi-calculator.html",
+    "description": "Adjust machines, transactions, order value, margin, and costs to estimate monthly profit and payback for an AI vending deployment.",
+    "section": "Resources"
+  },
+  {
+    "title": "Network & Connectivity Guide for Smart Vending",
+    "url": "resources/network-cpe-guide.html",
+    "description": "Smart vending depends on connectivity for payments and telemetry. This guide compares 4G, Wi-Fi, and ethernet and explains how to plan for uptime.",
+    "section": "Resources"
+  },
+  {
+    "title": "AI Vending Buyer's Checklist",
+    "url": "resources/ai-vending-buyers-checklist.html",
+    "description": "Use this checklist before signing any AI vending purchase: verify accuracy, total cost, service coverage, and contract terms.",
+    "section": "Resources"
+  },
+  {
+    "title": "Payment & Cashless Guide for Smart Vending",
+    "url": "resources/payment-cashless-guide.html",
+    "description": "Cashless payment is table stakes for AI vending. This guide covers reader hardware, fee structures, and how to pick a provider.",
+    "section": "Resources"
+  },
+  {
+    "title": "Maintenance & SLA Guide for Smart Vending",
+    "url": "resources/maintenance-sla-guide.html",
+    "description": "AI vending has fewer mechanical jams than traditional machines, but tech issues need a clear service plan. This guide covers SLAs and maintenance routines.",
+    "section": "Resources"
+  },
+  {
+    "title": "Location Selection Guide for AI Vending",
+    "url": "resources/location-selection-guide.html",
+    "description": "Location decides success more than hardware. This guide scores candidate sites on traffic, dwell time, utilities, and deal structure.",
+    "section": "Resources"
+  },
+  {
+    "title": "2026 Smart Retail Trends to Watch",
+    "url": "reports/2026-smart-retail-trends.html",
+    "description": "Edge AI, cashless expectations, and platform consolidation are redefining unattended retail. This report breaks down eight trends and what they mean for operators.",
+    "section": "Reports"
+  }
+]

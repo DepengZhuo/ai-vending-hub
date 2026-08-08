@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found</title>
+  <meta name="description" content="The page you're looking for doesn't exist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Page not found" />
+  <meta property="og:description" content="The page you're looking for doesn't exist." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* 全站色板：参考方案配色（primary #165dff / accent #10b981 / slate 灰阶） */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script type="application/ld+json">{"@type": "WebPage", "name": "404"}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="">
+<!-- ===== 导航栏（全站公共组件，由 assets/js/include.js 注入 components/nav.html）===== -->
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <section class="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
+      <p class="text-6xl font-extrabold text-blue-600">404</p>
+      <h1 class="mt-4 text-3xl font-extrabold text-gray-900">Page not found</h1>
+      <p class="mt-3 text-gray-600">Try a search, or jump back to a popular section.</p>
+      <div class="relative mx-auto mt-8 max-w-md">
+        <input id="site-search" type="search" placeholder="Search the site..." class="field-input pr-10" />
+        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+        <div id="search-results" class="card absolute left-0 right-0 top-12 z-10 hidden text-left"></div>
+      </div>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="btn-primary">Home</a>
+        <a href="knowledge/" class="btn-outline">Knowledge Base</a>
+        <a href="companies/" class="btn-outline">Companies</a>
+        <a href="resources/" class="btn-outline">Resources</a>
+      </div>
+    </section>
+
+  </main>
+<!-- ===== 页脚（全站公共组件，由 include.js 注入 components/footer.html）===== -->
+  <div id="footer-placeholder"></div>
+<!-- ===== Lead 弹窗（全站公共组件，由 include.js 注入 components/lead-modal.html）===== -->
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="assets/js/include.js" defer></script>
+  <script src="assets/js/modal.js" defer></script>
+  <script src="assets/js/forms.js" defer></script>
+  <script src="assets/js/search.js" defer></script>
+</body>
+</html>
