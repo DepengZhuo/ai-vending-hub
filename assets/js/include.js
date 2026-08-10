@@ -157,8 +157,8 @@ const FALLBACK_FOOTER = `<!-- ==================================================
         </p>
       </div>
       <p class="max-w-2xl text-sm leading-7 text-gray-400 lg:justify-self-end lg:text-right">
-        Plain-English guides, neutral comparisons, and market intelligence for operators,
-        venue owners, and investors planning unattended retail in North America.
+        Plain-English guides, unbiased comparisons, and market intelligence<br />
+        for operators, venue owners, and investors in North America.
       </p>
     </div>
 
