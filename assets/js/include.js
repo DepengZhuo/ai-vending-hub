@@ -56,7 +56,6 @@ const FALLBACK_NAV = `<!-- =====================================================
     </a>
 
     <!-- Desktop nav: one line -->
-        <!-- Desktop nav: one line -->
     <div class="hidden items-center gap-1 text-[0.9rem] font-medium text-gray-600 xl:flex">
       <a href="/" class="nav-link transition" data-nav="/">Home</a>
 
@@ -112,7 +111,6 @@ const FALLBACK_NAV = `<!-- =====================================================
   </nav>
 
   <!-- Mobile menu -->
-    <!-- Mobile menu -->
   <div id="mobile-menu" class="border-t border-gray-100 bg-white px-4 text-[0.95rem] font-medium text-gray-700 xl:hidden">
     <a href="/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Home</a>
 
@@ -155,7 +153,7 @@ const FALLBACK_FOOTER = `<!-- ==================================================
           <span class="text-lg font-bold text-white">AI Vending Hub</span>
         </a>
         <p class="mt-4 max-w-md text-base font-semibold leading-7 text-white sm:text-lg">
-          The independent resource for Smart Retail &amp; AI Vending.
+          The independent resource for understanding, launching, and scaling AI vending operations.
         </p>
       </div>
       <p class="max-w-2xl text-sm leading-7 text-gray-400 lg:justify-self-end lg:text-right">
@@ -209,8 +207,7 @@ const FALLBACK_FOOTER = `<!-- ==================================================
       <p class="font-mono tracking-wide">Independent media. Not affiliated with any vendor.</p>
     </div>
   </div>
-</footer>
-`;
+</footer>`;
 
 const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" aria-hidden="true" role="dialog" aria-modal="true">
   <!-- Backdrop: click to close -->
@@ -299,10 +296,13 @@ const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden it
   const body = document.body;
   const root = body.getAttribute("data-root") || "";
 
-  /* Rewrite root-relative links in injected components to current depth. */
+  /* Rewrite root-relative links in injected components to current depth.
+     href="/" resolves to the site root; use index.html so Home works from
+     root-level pages (e.g. about.html) where root === "". */
   function rewriteRootPaths(container) {
     container.querySelectorAll('a[href^="/"]').forEach((a) => {
-      a.setAttribute("href", root + a.getAttribute("href").slice(1));
+      const target = a.getAttribute("href").slice(1);
+      a.setAttribute("href", target === "" ? root + "index.html" : root + target);
     });
     container.querySelectorAll('img[src^="/"]').forEach((img) => {
       img.setAttribute("src", root + img.getAttribute("src").slice(1));

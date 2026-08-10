@@ -27,7 +27,7 @@ HEADER = """/* ============================================================
    ============================================================ */
 
 const SITE_CONFIG = {
-  domain: "https://depengzhuo.github.io/ai-vending-hub", // change before going live
+  domain: "https://depengzhuo.github.io/ai-vending-hub", // 上线地址；以后绑定自定义域名时替换
 };
 
 /* ========== Local preview fallbacks (keep in sync with components/) ========== */
@@ -42,10 +42,13 @@ const FALLBACK_MODAL = `__MODAL__`;
   const body = document.body;
   const root = body.getAttribute("data-root") || "";
 
-  /* Rewrite root-relative links in injected components to current depth. */
+  /* Rewrite root-relative links in injected components to current depth.
+     href="/" resolves to the site root; use index.html so Home works from
+     root-level pages (e.g. about.html) where root === "". */
   function rewriteRootPaths(container) {
     container.querySelectorAll('a[href^="/"]').forEach((a) => {
-      a.setAttribute("href", root + a.getAttribute("href").slice(1));
+      const target = a.getAttribute("href").slice(1);
+      a.setAttribute("href", target === "" ? root + "index.html" : root + target);
     });
     container.querySelectorAll('img[src^="/"]').forEach((img) => {
       img.setAttribute("src", root + img.getAttribute("src").slice(1));
@@ -164,6 +167,25 @@ const FALLBACK_MODAL = `__MODAL__`;
       window.dispatchEvent(new CustomEvent("components-injected"));
     }
   }, 120);
+
+  /* Back-to-top button (site-wide). */
+  (function initBackToTop() {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "back-to-top";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    document.body.appendChild(btn);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const onScroll = () => {
+      btn.classList.toggle("visible", window.scrollY > 320);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  })();
 })();
 """
 
