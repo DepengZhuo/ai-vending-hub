@@ -56,15 +56,46 @@ const FALLBACK_NAV = `<!-- =====================================================
     </a>
 
     <!-- Desktop nav: one line -->
+        <!-- Desktop nav: one line -->
     <div class="hidden items-center gap-1 text-[0.9rem] font-medium text-gray-600 xl:flex">
       <a href="/" class="nav-link transition" data-nav="/">Home</a>
-      <a href="/news/" class="nav-link transition" data-nav="/news/">News</a>
-      <a href="/knowledge/" class="nav-link transition" data-nav="/knowledge/">Knowledge Base</a>
-      <a href="/reviews/" class="nav-link transition" data-nav="/reviews/">Reviews</a>
-      <a href="/companies/" class="nav-link transition" data-nav="/companies/">Companies</a>
-      <a href="/deployment-guides/" class="nav-link transition" data-nav="/deployment-guides/">Guides</a>
-      <a href="/resources/" class="nav-link transition" data-nav="/resources/">Resources</a>
-      <a href="/reports/" class="nav-link transition" data-nav="/reports/">Reports</a>
+
+      <!-- Insights dropdown -->
+      <div class="relative group">
+        <button type="button" class="nav-link transition flex items-center gap-1.5" aria-haspopup="true" aria-expanded="false">
+          Insights <i class="fa-solid fa-chevron-down text-[0.68rem] text-gray-400 transition-transform duration-200 group-hover:rotate-180"></i>
+        </button>
+        <div class="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white p-2 shadow-xl shadow-gray-200/60">
+            <a href="/knowledge/" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50" data-nav="/knowledge/">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-primary"><i class="fa-solid fa-book-open text-sm"></i></span>
+              <span>
+                <span class="block text-sm font-semibold text-gray-900">Knowledge Base</span>
+                <span class="block text-xs text-gray-500">Fundamentals &amp; tech explainers</span>
+              </span>
+            </a>
+            <a href="/reports/" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50" data-nav="/reports/">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-primary"><i class="fa-solid fa-chart-line text-sm"></i></span>
+              <span>
+                <span class="block text-sm font-semibold text-gray-900">Market Reports</span>
+                <span class="block text-xs text-gray-500">Trends, sizing &amp; forecasts</span>
+              </span>
+            </a>
+            <a href="/reviews/" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50" data-nav="/reviews/">
+              <span class="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-primary"><i class="fa-solid fa-scale-balanced text-sm"></i></span>
+              <span>
+                <span class="block text-sm font-semibold text-gray-900">Comparisons</span>
+                <span class="block text-xs text-gray-500">Vendor &amp; format showdowns</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="/deployment-guides/" class="nav-link transition" data-nav="/deployment-guides/">Deployment Guides</a>
+      <a href="/resources/" class="nav-link transition" data-nav="/resources/">Tools &amp; Resources</a>
+      <a href="/companies/" class="nav-link transition" data-nav="/companies/">Directory</a>
+      <a href="/about.html" class="nav-link transition" data-nav="/about.html">About</a>
     </div>
 
     <!-- Right: CTA + mobile toggle -->
@@ -81,15 +112,22 @@ const FALLBACK_NAV = `<!-- =====================================================
   </nav>
 
   <!-- Mobile menu -->
+    <!-- Mobile menu -->
   <div id="mobile-menu" class="border-t border-gray-100 bg-white px-4 text-[0.95rem] font-medium text-gray-700 xl:hidden">
     <a href="/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Home</a>
-    <a href="/news/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">News</a>
-    <a href="/knowledge/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Knowledge Base</a>
-    <a href="/reviews/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Reviews</a>
-    <a href="/companies/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Companies</a>
-    <a href="/deployment-guides/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Guides</a>
-    <a href="/resources/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Resources</a>
-    <a href="/reports/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Reports</a>
+
+    <div class="border-b border-gray-100 py-2">
+      <p class="px-3 pb-1 pt-2 text-[0.72rem] font-bold uppercase tracking-wider text-gray-400">Insights</p>
+      <a href="/knowledge/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Knowledge Base</a>
+      <a href="/reports/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Market Reports</a>
+      <a href="/reviews/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Comparisons</a>
+    </div>
+
+    <a href="/deployment-guides/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Deployment Guides</a>
+    <a href="/resources/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Tools &amp; Resources</a>
+    <a href="/companies/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Directory</a>
+    <a href="/about.html" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">About</a>
+    <a href="/contact.html" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Contact</a>
     <div class="border-t border-gray-100 pt-3">
       <button type="button" data-open-modal class="btn-primary w-full">
         <i class="fa-solid fa-calendar-check"></i> Book a Demo
@@ -132,18 +170,17 @@ const FALLBACK_FOOTER = `<!-- ==================================================
         <h3 class="footer-col-title">Explore</h3>
         <ul class="mt-4 space-y-2.5 text-sm">
           <li><a href="/" class="footer-link">Home</a></li>
-          <li><a href="/news/" class="footer-link">Industry News</a></li>
-          <li><a href="/knowledge/" class="footer-link">Knowledge Base</a></li>
-          <li><a href="/reviews/" class="footer-link">Reviews &amp; Comparisons</a></li>
+                    <li><a href="/knowledge/" class="footer-link">Knowledge Base</a></li>
+          <li><a href="/reviews/" class="footer-link">Comparisons</a></li>
         </ul>
       </div>
       <div>
         <h3 class="footer-col-title">Plan</h3>
         <ul class="mt-4 space-y-2.5 text-sm">
-          <li><a href="/resources/" class="footer-link">Buyer's Guides</a></li>
+          <li><a href="/resources/" class="footer-link">Tools &amp; Resources</a></li>
           <li><a href="/resources/roi-calculator.html" class="footer-link">ROI Calculator</a></li>
           <li><a href="/deployment-guides/" class="footer-link">Deployment Guides</a></li>
-          <li><a href="/reports/" class="footer-link">Industry Reports</a></li>
+          <li><a href="/reports/" class="footer-link">Market Reports</a></li>
         </ul>
       </div>
       <div>
