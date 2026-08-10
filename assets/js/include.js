@@ -96,73 +96,82 @@ const FALLBACK_NAV = `<!-- =====================================================
   </div>
 </header>`;
 
-const FALLBACK_FOOTER = `<footer class="bg-[#0b1220] text-gray-400">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <!-- Left: brand statement / Right: link columns -->
-    <div class="grid gap-10 py-12 lg:grid-cols-[1fr_1.7fr] lg:gap-16">
-      <div class="max-w-sm">
+const FALLBACK_FOOTER = `<!-- ============================================================
+     Shared component: site footer (footer.html)
+     Injected by assets/js/include.js into <div id="footer-placeholder">.
+     Layout: brand + mission on row 1 (left / right), link columns
+     on row 2, legal bar on row 3.
+     ============================================================ -->
+<footer class="bg-[#0b1220] text-gray-400">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+
+    <!-- Row 1: brand on the left, mission statement on the right -->
+    <div class="grid items-end gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-20">
+      <div>
         <a href="/" class="flex items-center gap-2.5" aria-label="AI Vending Hub home">
           <span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary text-white">
             <i class="fa-solid fa-cube"></i>
           </span>
           <span class="text-lg font-bold text-white">AI Vending Hub</span>
         </a>
-        <p class="mt-4 text-sm font-semibold leading-6 text-white">
+        <p class="mt-5 max-w-md text-base font-semibold leading-7 text-white sm:text-lg">
           The independent resource for Smart Retail &amp; AI Vending.
         </p>
-        <p class="mt-2 text-sm leading-6 text-gray-400">
-          Plain-English guides, neutral comparisons, and market intelligence for operators,
-          venue owners, and investors planning unattended retail in North America.
-        </p>
       </div>
+      <p class="max-w-2xl text-sm leading-7 text-gray-400 lg:justify-self-end lg:text-right">
+        Plain-English guides, neutral comparisons, and market intelligence for operators,
+        venue owners, and investors planning unattended retail in North America.
+      </p>
+    </div>
 
-      <div class="grid grid-cols-2 gap-8 sm:grid-cols-4">
-        <div>
-          <h3 class="footer-col-title">Explore</h3>
-          <ul class="mt-4 space-y-2.5 text-sm">
-            <li><a href="/" class="footer-link">Home</a></li>
-            <li><a href="/news/" class="footer-link">Industry News</a></li>
-            <li><a href="/knowledge/" class="footer-link">Knowledge Base</a></li>
-            <li><a href="/reviews/" class="footer-link">Reviews &amp; Comparisons</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Plan</h3>
-          <ul class="mt-4 space-y-2.5 text-sm">
-            <li><a href="/resources/" class="footer-link">Buyer's Guides</a></li>
-            <li><a href="/resources/roi-calculator.html" class="footer-link">ROI Calculator</a></li>
-            <li><a href="/deployment-guides/" class="footer-link">Deployment Guides</a></li>
-            <li><a href="/reports/" class="footer-link">Industry Reports</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Directory</h3>
-          <ul class="mt-4 space-y-2.5 text-sm">
-            <li><a href="/companies/" class="footer-link">Company Directory</a></li>
-            <li><a href="/companies/365-retail-markets.html" class="footer-link">365 Retail Markets</a></li>
-            <li><a href="/companies/haha.html" class="footer-link">Haha Vending</a></li>
-            <li><a href="/companies/sandstar.html" class="footer-link">SandStar</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="footer-col-title">Hub</h3>
-          <ul class="mt-4 space-y-2.5 text-sm">
-            <li><a href="/about.html" class="footer-link">About</a></li>
-            <li><a href="/contact.html" class="footer-link">Contact</a></li>
-            <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="/terms.html" class="footer-link">Terms of Use</a></li>
-          </ul>
-        </div>
+    <!-- Row 2: link columns -->
+    <div class="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 border-t border-white/10 pt-14 sm:grid-cols-4 lg:mt-20 lg:pt-16">
+      <div>
+        <h3 class="footer-col-title">Explore</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="/" class="footer-link">Home</a></li>
+          <li><a href="/news/" class="footer-link">Industry News</a></li>
+          <li><a href="/knowledge/" class="footer-link">Knowledge Base</a></li>
+          <li><a href="/reviews/" class="footer-link">Reviews &amp; Comparisons</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Plan</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="/resources/" class="footer-link">Buyer's Guides</a></li>
+          <li><a href="/resources/roi-calculator.html" class="footer-link">ROI Calculator</a></li>
+          <li><a href="/deployment-guides/" class="footer-link">Deployment Guides</a></li>
+          <li><a href="/reports/" class="footer-link">Industry Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Directory</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="/companies/" class="footer-link">Company Directory</a></li>
+          <li><a href="/companies/365-retail-markets.html" class="footer-link">365 Retail Markets</a></li>
+          <li><a href="/companies/haha.html" class="footer-link">Haha Vending</a></li>
+          <li><a href="/companies/sandstar.html" class="footer-link">SandStar</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Hub</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="/about.html" class="footer-link">About</a></li>
+          <li><a href="/contact.html" class="footer-link">Contact</a></li>
+          <li><a href="/privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="/terms.html" class="footer-link">Terms of Use</a></li>
+        </ul>
       </div>
     </div>
 
     <!-- Bottom bar -->
-    <div class="flex flex-col items-start justify-between gap-3 border-t border-white/10 py-6 text-xs text-gray-500 sm:flex-row sm:items-center">
+    <div class="mt-12 flex flex-col items-start justify-between gap-3 border-t border-white/10 pt-8 text-xs text-gray-500 sm:flex-row sm:items-center lg:mt-16">
       <p>&copy; 2026 AI Vending Hub. All rights reserved.</p>
       <p class="font-mono tracking-wide">Independent media. Not affiliated with any vendor.</p>
     </div>
   </div>
-</footer>`;
+</footer>
+`;
 
 const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" aria-hidden="true" role="dialog" aria-modal="true">
   <!-- Backdrop: click to close -->

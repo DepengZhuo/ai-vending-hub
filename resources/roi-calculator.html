@@ -68,7 +68,7 @@
       <p class="mt-5 text-lg leading-8 text-gray-600">Adjust machines, transactions, order value, margin, and costs to estimate monthly profit and payback for an AI vending deployment.</p>
 
       <div class="mt-6"><!-- ===== ROI 计算器：流量/转化/客单价驱动，实时计算（逻辑在 assets/js/roi-calculator.js）===== -->
-      <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+      <div id="calculator" class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div class="card p-6 space-y-5">
           <h2 class="text-xl font-extrabold text-gray-900">Your assumptions</h2>
           <div>
@@ -183,18 +183,18 @@
     <!-- ===== 转化 CTA 区块：Book a Demo 按钮弹全站 Lead 弹窗 ===== -->
       
             <!-- ===== Conversion CTA: compact card with page-specific copy ===== -->
-    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-12 sm:px-10 lg:px-14 lg:py-14">
+        <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
         <div class="grid-pattern absolute inset-0 opacity-40"></div>
-        <div class="relative grid items-center gap-7 lg:grid-cols-[1.15fr_auto]">
+        <div class="relative grid items-center gap-10 lg:grid-cols-[1.2fr_auto]">
           <div>
             <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-blue-300">Numbers check</p>
-            <h2 class="mt-2.5 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Want someone to review your ROI math?</h2>
-            <p class="mt-2.5 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Send us your assumptions — we'll sanity-check the model with you.</p>
+            <h2 class="mt-3 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Want someone to review your ROI math?</h2>
+            <p class="mt-3 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Send us your assumptions — we'll sanity-check the model with you.</p>
           </div>
-          <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
-            <button type="button" data-open-modal class="btn-white !py-3"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
-            <a href="../resources/" class="btn-light-outline">More tools <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          <div class="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-stretch">
+            <button type="button" data-open-modal class="btn-white !py-4 sm:flex-1 lg:flex-none"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+            <a href="#calculator" class="btn-light-outline !py-4 sm:flex-1 lg:flex-none"><i class="fa-solid fa-calculator"></i> Open ROI Calculator</a>
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ HEADER = """/* ============================================================
    ============================================================ */
 
 const SITE_CONFIG = {
-  domain: "https://www.aivendinghub.com", // change before going live
+  domain: "https://depengzhuo.github.io/ai-vending-hub", // change before going live
 };
 
 /* ========== Local preview fallbacks (keep in sync with components/) ========== */
