@@ -116,7 +116,7 @@
   {
     "title": "365 Retail Markets",
     "url": "companies/365-retail-markets.html",
-    "description": "Micro markets, kiosks, and AI smart coolers for unattended retail",
+    "description": "Micro markets, kiosks, and AI smart coolers",
     "section": "Companies"
   },
   {
@@ -128,11 +128,11 @@
   {
     "title": "XMAI Vending",
     "url": "companies/xmai.html",
-    "description": "AI vending machines and smart coolers with cloud management",
+    "description": "AI vending machines with cloud management",
     "section": "Companies"
   },
   {
-    "title": "QINGO (Wuhan Qinggouyun Technology)",
+    "title": "QINGO",
     "url": "companies/qingo.html",
     "description": "Smart self-serve cabinets with RFID and vision",
     "section": "Companies"
@@ -162,27 +162,33 @@
     "section": "Companies"
   },
   {
-    "title": "AI Vending for Universities",
-    "url": "deployment-guides/university.html",
-    "description": "How to deploy AI vending on university campuses: product selection, placement, and metrics for dorms, libraries, and student centers.",
+    "title": "AI Vending for Apartments",
+    "url": "deployment-guides/apartment.html",
+    "description": "AI vending for apartment buildings: product selection for residents, placement in lobbies and package rooms, and turning amenity space into 24/7 retail.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Factories",
+    "url": "deployment-guides/factory.html",
+    "description": "AI vending for factories and industrial sites: product selection for shift workers, placement in break areas, and capturing after-hours demand.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Gyms",
+    "url": "deployment-guides/gym.html",
+    "description": "AI vending for gyms: product selection for fitness members, placement near training areas, and capturing pre- and post-workout demand.",
     "section": "Deployment Guides"
   },
   {
     "title": "AI Vending for Hospitals",
     "url": "deployment-guides/hospital.html",
-    "description": "AI vending for hospitals: product selection for staff, visitors, and patients, plus compliance and placement guidance.",
-    "section": "Deployment Guides"
-  },
-  {
-    "title": "AI Vending for Airports",
-    "url": "deployment-guides/airport.html",
-    "description": "AI vending at airports: high-traffic placement, product selection for travelers, and security constraints to plan around.",
+    "description": "AI vending for hospitals: product selection for staff and visitors, placement in waiting areas, and compliance-friendly operations.",
     "section": "Deployment Guides"
   },
   {
     "title": "AI Vending for Hotels",
     "url": "deployment-guides/hotel.html",
-    "description": "AI vending for hotels: guest-facing product selection, lobby placement, and how to avoid cannibalizing room service.",
+    "description": "AI vending for hotels: guest-facing product selection, lobby placement, and 24/7 convenience without staffing a shop.",
     "section": "Deployment Guides"
   },
   {
@@ -192,9 +198,15 @@
     "section": "Deployment Guides"
   },
   {
-    "title": "AI Vending for Gyms",
-    "url": "deployment-guides/gym.html",
-    "description": "AI vending for gyms: product selection for fitness members, placement near training areas, and measuring per-member revenue.",
+    "title": "AI Vending for Schools & Campuses",
+    "url": "deployment-guides/school.html",
+    "description": "AI vending for schools and campuses: product selection for students, placement near gyms and libraries, and capturing after-hours demand.",
+    "section": "Deployment Guides"
+  },
+  {
+    "title": "AI Vending for Airports",
+    "url": "deployment-guides/airport.html",
+    "description": "AI vending at airports: high-traffic placement, product selection for travelers, and security constraints to plan around.",
     "section": "Deployment Guides"
   },
   {
