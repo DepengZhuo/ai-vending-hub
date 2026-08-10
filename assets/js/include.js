@@ -382,4 +382,23 @@ const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden it
       window.dispatchEvent(new CustomEvent("components-injected"));
     }
   }, 120);
+
+  /* Back-to-top button (site-wide). */
+  (function initBackToTop() {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "back-to-top";
+    btn.setAttribute("aria-label", "Back to top");
+    btn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    document.body.appendChild(btn);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const onScroll = () => {
+      btn.classList.toggle("visible", window.scrollY > 320);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  })();
 })();
