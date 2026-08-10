@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!-- 当前为 GitHub Pages 地址；绑定自定义域名后替换为正式域名并重新提交 Search Console -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/index.html</loc></url>
@@ -41,12 +41,14 @@
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/companies/tcn.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/companies/haha.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/companies/grabot.html</loc></url>
-  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/university.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/apartment.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/factory.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/gym.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/hospital.html</loc></url>
-  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/airport.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/hotel.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/office.html</loc></url>
-  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/gym.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/school.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/deployment-guides/airport.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/resources/how-much-does-ai-vending-cost.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/resources/how-to-start-ai-vending-business.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/resources/roi-calculator.html</loc></url>
