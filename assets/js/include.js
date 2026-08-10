@@ -64,6 +64,7 @@ const FALLBACK_NAV = `<!-- =====================================================
       <a href="/companies/" class="nav-link transition" data-nav="/companies/">Companies</a>
       <a href="/deployment-guides/" class="nav-link transition" data-nav="/deployment-guides/">Guides</a>
       <a href="/resources/" class="nav-link transition" data-nav="/resources/">Resources</a>
+      <a href="/reports/" class="nav-link transition" data-nav="/reports/">Reports</a>
     </div>
 
     <!-- Right: CTA + mobile toggle -->
@@ -88,6 +89,7 @@ const FALLBACK_NAV = `<!-- =====================================================
     <a href="/companies/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Companies</a>
     <a href="/deployment-guides/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Guides</a>
     <a href="/resources/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Resources</a>
+    <a href="/reports/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Reports</a>
     <div class="border-t border-gray-100 pt-3">
       <button type="button" data-open-modal class="btn-primary w-full">
         <i class="fa-solid fa-calendar-check"></i> Book a Demo
