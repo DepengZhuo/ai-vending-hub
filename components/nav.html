@@ -40,9 +40,9 @@
 
       <!-- Insights dropdown -->
       <div class="relative group">
-        <button type="button" class="nav-link transition flex items-center gap-1.5" aria-haspopup="true" aria-expanded="false">
+        <a href="/insights/" class="nav-link transition flex items-center gap-1.5" data-nav="/insights/" aria-haspopup="true">
           Insights <i class="fa-solid fa-chevron-down text-[0.68rem] text-gray-400 transition-transform duration-200 group-hover:rotate-180"></i>
-        </button>
+        </a>
         <div class="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
           <div class="overflow-hidden rounded-2xl border border-gray-100 bg-white p-2 shadow-xl shadow-gray-200/60">
             <a href="/knowledge/" class="flex items-start gap-3 rounded-xl px-3 py-2.5 transition hover:bg-gray-50" data-nav="/knowledge/">
@@ -94,7 +94,7 @@
     <a href="/" class="block rounded-[10px] px-3 py-2.5 hover:bg-gray-50">Home</a>
 
     <div class="border-b border-gray-100 py-2">
-      <p class="px-3 pb-1 pt-2 text-[0.72rem] font-bold uppercase tracking-wider text-gray-400">Insights</p>
+      <a href="/insights/" class="block px-3 pb-1 pt-2 text-[0.72rem] font-bold uppercase tracking-wider text-gray-400 transition hover:text-primary">Insights</a>
       <a href="/knowledge/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Knowledge Base</a>
       <a href="/reports/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Market Reports</a>
       <a href="/reviews/" class="block rounded-[10px] px-3 py-2.5 pl-5 hover:bg-gray-50">Comparisons</a>
