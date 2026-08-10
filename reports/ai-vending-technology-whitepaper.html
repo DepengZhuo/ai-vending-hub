@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How AI Vending Works: The Technology Stack Explained</title>
+  <meta name="description" content="A plain-English technical breakdown of AI vending: computer vision, IoT, cloud platforms, cashless payments, and the algorithms that make unattended retail work." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How AI Vending Works: The Technology Stack Explained" />
+  <meta property="og:description" content="A plain-English technical breakdown of AI vending: computer vision, IoT, cloud platforms, cashless payments, and the algorithms that make unattended retail work." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* Site palette: primary #165dff / slate grays */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How AI Vending Works: The Technology Stack Explained", "description": "A plain-English technical breakdown of AI vending: computer vision, IoT, cloud platforms, cashless payments, and the algorithms that make unattended retail work.", "datePublished": "August 2026", "author": {"@type": "Person", "name": "Editorial Team"}, "publisher": {"@type": "Organization", "name": "AI Vending Hub"}}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="../">
+  <div id="nav-placeholder"></div>
+  <main>
+    <article class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <nav class="text-xs text-gray-400" aria-label="Breadcrumb"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-blue-600" href="../index.html">Home</a></li><li><i class="fa-solid fa-chevron-right text-[10px]"></i></li><li><a class="hover:text-blue-600" href="../reports/index.html">Market Reports</a></li><li><i class="fa-solid fa-chevron-right text-[10px]"></i></li><li class="truncate text-gray-600">How AI Vending Works: The Technology Stack Explained</li></ol></nav>
+      <span class="chip mt-6">Report</span>
+      <h1 class="mt-3 text-4xl font-extrabold leading-tight tracking-tight text-gray-900">How AI Vending Works: The Technology Stack Explained</h1>
+      <p class="mt-4 text-xs text-gray-400">August 2026 · Editorial Team · 12 min read</p>
+      <p class="mt-6 text-lg leading-8 text-gray-600">Strip away the marketing and an AI vending machine is five systems working as one: a camera that sees, a brain that recognizes, a payment rail that settles, a cloud that monitors, and an algorithm that tells you what to stock next. This whitepaper explains each layer in plain English and gives you the questions to ask vendors.</p>
+      
+<h2 id="executive-summary" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Executive summary</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">AI vending replaces the mechanical certainty of coils and spirals with something closer to a self-checkout aisle in a box. The practical difference for operators: <strong>any item in any slot, no mechanical failure between the customer and the SKU</strong>. The technology stack has five layers, and most buying mistakes happen because buyers evaluate the cabinet (layer one) while ignoring the platform (layers four and five) where the real value lives.</p>
+<div class="mt-5 overflow-x-auto"><table class="data-table"><thead><tr><th>Layer</th><th>What it does</th><th>Why it matters</th></tr></thead><tbody><tr><td>Sensing</td><td>Cameras / weight / sensors detect take-and-return</td><td>The machine must know what happened, not guess</td></tr><tr><td>Recognition</td><td>Computer vision identifies the SKU and quantity</td><td>Accuracy drives revenue integrity</td></tr><tr><td>Payments</td><td>NFC, QR, card-on-file, wallets settle the basket</td><td>Cashless removes friction and theft vectors</td></tr><tr><td>Platform</td><td>Cloud telemetry, remote config, OTA updates</td><td>Operations without truck rolls</td></tr><tr><td>Analytics</td><td>Demand forecasting, assortment, dynamic pricing</td><td>The moat: data beats hardware</td></tr></tbody></table></div>
+
+<h2 id="vision" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Computer vision: the machine grows eyes</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">The easiest analogy: a traditional vending machine is a shelf with springs that decides for you; an AI cabinet is a glass-fronted fridge with a camera that <strong>watches you shop and bills you at the door - like giving the shelf automatic-checkout eyes</strong>. The camera detects when a hand enters a compartment, whether an item is taken or returned, and which SKU moved. That signal is matched against the product catalog and becomes the transaction.</p>
+<ul class="mt-4 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li><strong>Recognition accuracy</strong> is the headline metric - leading systems claim 99%+ on bounded catalogs. Ask vendors for their number <em>and their failure handling</em>.</li><li><strong>Latency</strong> matters less than consistency; a 2-3 second "processing" pause is fine, a mis-billed item is not.</li><li><strong>Architectures vary</strong>: camera-only, sensor-assisted (weight/IR), and hybrid. Hybrid designs are more robust to occlusion and bagging.</li><li><strong>Bounded catalogs win</strong>: a 50-200 SKU catalog with known packshots is where vision is genuinely reliable today.</li></ul>
+
+<h2 id="comparison" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Traditional vs smart vs AI vending</h2>
+<div class="mt-5 overflow-x-auto"><table class="data-table"><thead><tr><th>Dimension</th><th>Traditional</th><th>Smart</th><th>AI vending</th></tr></thead><tbody><tr><td>Payment</td><td>Cash / coins / basic card</td><td>Card + some mobile</td><td>Full mobile: NFC, QR, wallets</td></tr><tr><td>Inventory</td><td>Manual checks</td><td>Sensors + remote monitoring</td><td>Computer vision + real-time IoT</td></tr><tr><td>Product selection</td><td>Fixed columns</td><td>Remote SKU config</td><td>Data-driven assortment & recommendations</td></tr><tr><td>Analytics</td><td>Basic sales totals</td><td>Limited remote data</td><td>Per-transaction behavior + deep analytics</td></tr><tr><td>Loss prevention</td><td>Simple locks</td><td>RFID / camera assist</td><td>AI vision monitoring + identity checks</td></tr></tbody></table></div>
+
+<h2 id="iot" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">IoT & the cloud platform</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">Every AI machine phones home. IoT telemetry streams door-open events, temperature (for cold chains), payment failures, and stock levels to a cloud dashboard. That means an operator can see a sold-out slot from a phone, push a restock route, and update a price remotely - without visiting the machine. The operational promise is simple: <strong>fewer truck rolls, fewer stockouts, and a cleaner P&L</strong>.</p>
+
+<h2 id="payments" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Payments & settlement</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">Cashless is not an optional add-on in this category; it is the architecture. NFC cards, Apple Pay / Google Pay, QR, and card-on-file all route through a payment processor, and settlement is automatic at the item level. Because the camera already knows the basket, the payment rail is a reconciliation layer rather than the source of truth. This is a meaningful shift from traditional vending, where the coin mechanism was both the payment system and the failure point.</p>
+
+<h2 id="analytics" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Analytics & algorithms</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">The fifth layer is where operators earn their margin. Demand forecasting uses sales velocity and time-of-day patterns to suggest restock quantities; assortment algorithms surface underperforming slots; and dynamic pricing lets operators test promotions on a per-machine basis. None of this requires a data scientist - modern platforms ship it as dashboards - but it rewards operators who actually act on the recommendations.</p>
+
+<h2 id="security" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Security & privacy</h2>
+<p class="mt-3 text-base leading-7 text-gray-600">Camera-based retail raises two questions: loss prevention and customer privacy. On prevention, AI systems detect anomalies (e.g., un-billed removals) and can flag repeat incidents per device. On privacy, treat the EU GDPR and similar rules as the baseline: data minimization, encryption in transit and at rest, and clear signage. A vendor that cannot explain its data retention policy is a risk, not a feature.</p>
+
+<h2 id="trends" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Technology trends to watch</h2>
+<ul class="mt-4 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li><strong>Edge AI</strong>: recognition moving on-device reduces latency and recurring cloud costs.</li><li><strong>Multimodal models</strong>: combining vision with other signals for harder edge cases (bundles, crowded scenes).</li><li><strong>5G &amp; mesh connectivity</strong>: faster, cheaper links for dense deployments and over-the-air updates.</li><li><strong>Robotics integration</strong>: restocking robots and AI vending converging in the same operational layer.</li></ul>
+
+<h2 id="vendor-questions" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">What to ask before you buy</h2>
+<ul class="mt-4 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li>What is your recognition accuracy, and what happens when a transaction fails mid-purchase?</li><li>Are analytics included, or is the platform a paid tier?</li><li>How do OTA updates and remote SKU changes work in practice?</li><li>What is the data-retention and privacy policy for camera footage?</li><li>What is the real uptime and service SLA - and who fixes the machine when it breaks?</li></ul>
+      <section class="mt-14">
+      <h2 class="mb-4 text-2xl font-extrabold text-gray-900">Frequently asked questions</h2>
+      <div class="space-y-3"><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">How accurate is AI item recognition?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Leading systems report 99%+ accuracy on bounded catalogs (50-200 SKUs with known images). Accuracy drops with unbounded catalogs, poor lighting, and unusual packing - so ask about the vendor's real-world number.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Does AI vending require an internet connection?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Yes, for payments and cloud management. Most deployments run on 4G/5G or existing venue Wi-Fi; offline-cashless fallback varies by vendor.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Can the camera identify people?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Reputable systems focus on item detection and basket integrity, not identity. GDPR-style rules and clear signage should be standard.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Is this just a smart fridge?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Smart fridges are one form factor. AI lockers, glass-door cabinets, and hybrid units share the same stack with different form factors and use cases.</p></details></div>
+    </section>
+      <section class="mt-14">
+      <h2 class="mb-4 text-2xl font-extrabold text-gray-900">Related reports</h2>
+      <div class="grid gap-4 sm:grid-cols-2"><a href="../knowledge/what-is-ai-vending.html" class="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-gray-200 hover:shadow-sm"><span class="chip">Report</span><h3 class="mt-2 font-bold text-gray-900 group-hover:text-primary">What Is AI Vending?</h3><p class="mt-1 text-sm text-gray-500">The fundamentals, in one page.</p></a><a href="../reports/ai-vending-market-size-forecast.html" class="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-gray-200 hover:shadow-sm"><span class="chip">Report</span><h3 class="mt-2 font-bold text-gray-900 group-hover:text-primary">AI Vending Market Size & Forecast</h3><p class="mt-1 text-sm text-gray-500">Where this technology is heading commercially.</p></a><a href="../resources/payment-cashless-guide.html" class="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-gray-200 hover:shadow-sm"><span class="chip">Report</span><h3 class="mt-2 font-bold text-gray-900 group-hover:text-primary">Payment & Cashless Guide</h3><p class="mt-1 text-sm text-gray-500">A deeper look at the payments layer.</p></a><a href="../reviews/ai-vending-vs-spiral-vending.html" class="group rounded-2xl border border-gray-100 bg-white p-5 transition hover:border-gray-200 hover:shadow-sm"><span class="chip">Report</span><h3 class="mt-2 font-bold text-gray-900 group-hover:text-primary">AI Vending vs. Spiral Vending</h3><p class="mt-1 text-sm text-gray-500">The practical comparison behind the tech.</p></a></div>
+    </section>
+    </article>
+    <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-16 sm:px-10 lg:px-16 lg:py-20">
+        <div class="grid-pattern absolute inset-0 opacity-40"></div>
+        <div class="relative grid items-center gap-10 lg:grid-cols-[1.2fr_auto]">
+          <div>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-blue-300">Market intelligence</p>
+            <h2 class="mt-3 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Evaluating a specific machine or vendor?</h2>
+            <p class="mt-3 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Send us the spec sheet and we will help you compare the stack - not just the price.</p>
+          </div>
+          <div class="flex flex-col gap-4 sm:flex-row lg:flex-col lg:items-stretch">
+            <button type="button" data-open-modal class="btn-white border border-transparent !py-4 sm:flex-1 lg:flex-none"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+            <a href="../reports/" class="btn-light-outline !py-4 sm:flex-1 lg:flex-none">More reports <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="footer-placeholder"></div>
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="../assets/js/include.js" defer></script>
+  <script src="../assets/js/modal.js" defer></script>
+  <script src="../assets/js/forms.js" defer></script>
+</body>
+</html>

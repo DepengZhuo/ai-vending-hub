@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- AI Vending Hub sitemap (regenerated: modules minus News) -->
+<!-- AI Vending Hub sitemap (regenerated) -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/index.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/about.html</loc></url>
@@ -18,6 +18,9 @@
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/knowledge/what-is-telemetry-in-vending.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/reports/index.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/reports/2026-smart-retail-trends.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/reports/ai-vending-market-size-forecast.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/reports/ai-vending-technology-whitepaper.html</loc></url>
+  <url><loc>https://depengzhuo.github.io/ai-vending-hub/reports/us-unattended-retail-market.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/reviews/index.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/reviews/365-retail-markets-vs-vistar.html</loc></url>
   <url><loc>https://depengzhuo.github.io/ai-vending-hub/reviews/ai-vending-vs-micro-market.html</loc></url>
