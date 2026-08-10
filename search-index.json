@@ -210,6 +210,12 @@
     "section": "Deployment Guides"
   },
   {
+    "title": "AI Vending for Universities & Colleges",
+    "url": "deployment-guides/university.html",
+    "description": "AI vending on university campuses: late-night study demand, dorm and library placement, and a product mix students actually buy.",
+    "section": "Deployment Guides"
+  },
+  {
     "title": "How Much Does AI Vending Cost?",
     "url": "resources/how-much-does-ai-vending-cost.html",
     "description": "AI vending costs $6,000 to $15,000 per unit upfront plus $20 to $80 per machine monthly in software, payment, and connectivity fees.",
