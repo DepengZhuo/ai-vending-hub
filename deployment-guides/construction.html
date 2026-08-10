@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Vending for Construction Sites</title>
+  <meta name="description" content="How AI vending works on construction sites: shift-based demand, break-trailer placement, hydration and safety essentials, and the productivity return for general contractors." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="AI Vending for Construction Sites" />
+  <meta property="og:description" content="How AI vending works on construction sites: shift-based demand, break-trailer placement, hydration and safety essentials, and the productivity return for general contractors." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  /* 全站色板：参考方案配色（primary #165dff / accent #10b981 / slate 灰阶） */
+  if (window.tailwind) {
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
+            accent: "#165dff",
+            blue: {
+              50: "#eef4ff",
+              100: "#dbe7ff",
+              200: "#bfd3ff",
+              300: "#8fb0ff",
+              400: "#4f82ff",
+              500: "#165dff",
+              600: "#1249cc",
+              700: "#0b2f8a",
+              800: "#0a245f",
+              900: "#081a42",
+            },
+            gray: {
+              50: "#f8fafc",
+              100: "#f1f5f9",
+              200: "#e2e8f0",
+              300: "#cbd5e1",
+              400: "#94a3b8",
+              500: "#64748b",
+              600: "#475569",
+              700: "#334155",
+              800: "#1e293b",
+              900: "#0f172a",
+            },
+          },
+        },
+      },
+    };
+  }
+</script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI Vending for Construction Sites", "description": "How AI vending works on construction sites: shift-based demand, break-trailer placement, hydration and safety essentials, and the productivity return for general contractors."}</script>
+</head>
+<body class="bg-white text-gray-900 antialiased" data-root="../">
+<!-- ===== 导航栏（全站公共组件，由 assets/js/include.js 注入 components/nav.html）===== -->
+  <div id="nav-placeholder"></div>
+  <main>
+
+    <article class="mx-auto max-w-3xl px-4 py-12 sm:px-6">
+      <nav class="text-xs text-gray-400" aria-label="Breadcrumb"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-blue-600" href="../index.html">Home</a></li><li><i class="fa-solid fa-chevron-right text-[10px]"></i></li><li><a class="hover:text-blue-600" href="../deployment-guides/index.html">Deployment Guides</a></li><li><i class="fa-solid fa-chevron-right text-[10px]"></i></li><li class="truncate text-gray-600">AI Vending for Construction Sites</li></ol></nav>
+      <span class="chip mt-6">Deployment Guide</span>
+      <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-gray-900">AI Vending for Construction Sites</h1>
+      <img src="../assets/images/shared/vending-machine-factory-catalog-9c2d7f.webp" alt="AI Vending for Construction Sites" class="content-img" />
+
+      <!-- ===== 场景背景 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-helmet-safety text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">The scenario</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Construction sites are remote, physical, and time-boxed. Workers burn thousands of calories per shift, breaks run ten to fifteen minutes, and the nearest store is often miles away. Food trucks are unreliable, packed lunches spoil in the heat, and an off-site food run can cost a crew member 30 to 60 minutes of paid time. An AI vending unit in the site office or break trailer turns that gap into a 24/7 fuel and safety station — always open, no staff, no paperwork.</p>
+      <p class="mb-6 leading-7 text-gray-600">For general contractors, the unit is more than a snack machine. It is a productivity tool that keeps crews on site, a benefit that workers actually use, and — stocked with the right safety items — a quiet line of defense on OSHA-style PPE compliance. The operator handles stocking and service; the contractor provides a corner, power, and network.</p>
+
+      <!-- ===== 受众与痛点 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-people-group text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Who you are serving</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Construction workers are the least price-sensitive audience in vending: when a five-dollar protein bar keeps you going for three hours of physical work, it stops feeling like a luxury. The people you serve break into four groups:</p>
+      <ul class="mb-8 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li><strong>Field workers.</strong> High caloric need, short breaks, and a tight daily routine. They buy on habit — coffee before the shift, hydration and fuel at breaks, a meal at lunch.</li><li><strong>Night and overtime crews.</strong> The most underserved group. When food trucks and nearby diners are closed, the unit is the only option on site.</li><li><strong>General contractors and site managers.</strong> They care about productivity, break discipline, and PPE compliance. A well-stocked unit supports all three.</li><li><strong>Subcontractors and visitors.</strong> Temporary crews and inspectors add real, if unpredictable, daytime volume.</li></ul>
+      <p class="mb-6 leading-7 text-gray-600">The core pain points are consistent: no nearby food, unreliable supply, short breaks, and the safety-gear moment — a torn glove or missing pair of glasses that has to be replaced immediately, not after lunch.</p>
+
+      <!-- ===== 为什么适合 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-circle-check text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Why AI vending fits</h2></div>
+      <ul class="mb-8 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li>Sites are remote and isolated, so convenience has no nearby competitor — every purchase stays on site.</li><li>Demand is tied to shift changes and breaks, making it predictable and easy to stock for.</li><li>Breaks are short, which favors a fast grab-and-go format over queues and slow machines.</li><li>A single unit covers hydration, food, and safety essentials in one footprint — critical when break-trailer space is tight.</li><li>Enclosed cabinets with automatic billing keep shrinkage near zero, even in high-turnover, multi-crew environments.</li><li>The productivity return — fewer off-site food trips — often exceeds the value of the sales themselves.</li></ul>
+
+      <!-- ===== 高峰时段 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-clock text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Peak buying windows</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Buying follows the workday, and the workday starts early. These are the four windows that drive most sales on a typical site:</p>
+      <div class="mb-8 overflow-x-auto"><table class="data-table"><thead><tr><th>Window</th><th>What workers buy</th><th>Why it happens</th></tr></thead><tbody><tr><td><strong>Pre-shift (6–7 AM)</strong></td><td>Coffee, breakfast bars, hydration</td><td>Crews fuel up before clocking in; there is nothing else open at that hour.</td></tr><tr><td><strong>Morning break (~9:30 AM)</strong></td><td>Energy drinks, quick snacks</td><td>A 15-minute break needs an instant boost, not a trip.</td></tr><tr><td><strong>Lunch cover (12–1 PM)</strong></td><td>Full meal replacements, hydration</td><td>Food trucks are unreliable and packed lunches run out; the unit is the dependable option.</td></tr><tr><td><strong>Afternoon heat (2–4 PM)</strong></td><td>Electrolytes, large water</td><td>Peak heat means real hydration demand — workers lose liters of fluid per shift.</td></tr></tbody></table></div>
+
+      <!-- ===== 放置位置 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-location-dot text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Where to place the unit</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Placement on a construction site is about meeting workers where they already stop — and keeping the unit out of the dust, mud, and traffic:</p>
+      <div class="mb-8 overflow-x-auto"><table class="data-table"><thead><tr><th>Location</th><th>Why it works</th><th>Best stocked with</th></tr></thead><tbody><tr><td><strong>Site office or break trailer</strong></td><td>The anchor. Every crew passes through at shift start, breaks, and lunch.</td><td>Coffee, meals, water, and a full safety-gear section.</td></tr><tr><td><strong>Locker or changing area</strong></td><td>High traffic at shift starts and ends; a natural home for PPE and personal essentials.</td><td>Gloves, glasses, earplugs, and personal-care items.</td></tr><tr><td><strong>Entrance or gate area</strong></td><td>Catches pre-shift coffee and breakfast for workers arriving on site.</td><td>Coffee, breakfast bars, and water.</td></tr><tr><td><strong>Trailer parks or staging areas</strong></td><td>Serves multiple crews without sending anyone far from the work zone.</td><td>Hydration and high-calorie snacks in bulk.</td></tr></tbody></table></div>
+      <div class="mb-8 flex gap-3 rounded-2xl border border-blue-100 bg-blue-50 p-5 text-sm leading-6 text-gray-700"><i class="fa-solid fa-triangle-exclamation mt-0.5 shrink-0 text-primary"></i><div>Before installing, coordinate with the general contractor on power, network, and placement that keeps the unit clear of equipment paths, fire lanes, and material storage. On most sites the cleanest spot is inside or beside the site office / break trailer, where power already exists and the unit stays clean.</div></div>
+
+      <!-- ===== 选品 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-cubes text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">How to choose products for this venue</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Space in a break trailer is limited, so every slot has to earn its place. A three-layer mix works best on construction sites:</p>
+      <div class="mb-8 overflow-x-auto"><table class="data-table"><thead><tr><th>Layer</th><th>Role in the unit</th><th>Example items</th><th>Margin profile</th></tr></thead><tbody><tr><td><strong>Hydration & energy</strong></td><td>Traffic driver. Workers lose 2–3 liters of fluid per shift; these items drive multiple daily visits.</td><td>Large water bottles (1–1.5 L), sports drinks, energy drinks, iced tea.</td><td>Low to mid — but high frequency.</td></tr><tr><td><strong>Heavy sustenance</strong></td><td>Profit driver. High-calorie, shelf-stable food that fuels a 4,000-calorie workday.</td><td>Jerky, meat sticks, microwaveable handheld meals, protein bars, meal-replacement shakes, electrolyte powders.</td><td>High volume at strong margins.</td></tr><tr><td><strong>Site essentials</strong></td><td>Emergency + margin driver. A worker who rips a glove will pay eight dollars for a two-dollar pair.</td><td>Work gloves, safety glasses, earplugs, dust masks, knee pads, sunscreen, OTC pain relievers.</td><td>The highest margins in the unit, low volume.</td></tr></tbody></table></div>
+      <p class="mb-6 leading-7 text-gray-600">Rotate with the season and the weather: electrolytes, cooling towels, and SPF 50+ sunscreen fly off the shelf in summer; instant coffee, hand warmers, and thermal gloves dominate in winter. Once crews realize the unit stocks safety gear, it stops being optional — it becomes part of how the site runs.</p>
+
+      <!-- ===== 陈列 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-layer-group text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">How to arrange the shelves</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">Construction workers do not browse. They grab and go in under 30 seconds, so the unit has to be scannable at a glance:</p>
+      <div class="mb-8 overflow-x-auto"><table class="data-table"><thead><tr><th>Shelf zone</th><th>What goes there</th><th>Why</th></tr></thead><tbody><tr><td><strong>Top shelves</strong></td><td>Gloves, glasses, earplugs, masks, sunscreen</td><td>Safety gear at eye level signals the unit is part of the site — and catches the "I need a replacement now" moment.</td></tr><tr><td><strong>Middle shelves (eye level)</strong></td><td>Jerky, protein bars, meal shakes, energy drinks</td><td>The natural reach zone. Cluster high-calorie items so the standard combo — jerky plus a bar plus a drink — is one grab.</td></tr><tr><td><strong>Bottom shelves</strong></td><td>Large water bottles, drink multipacks</td><td>Heavy items workers will bend for, freeing eye-level space for profit items.</td></tr></tbody></table></div>
+
+      <!-- ===== 运营 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-gears text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Running the unit well</h2></div>
+      <ul class="mb-8 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li><strong>Restock around shift changes:</strong> time full restocks so each incoming crew finds a full unit. Stock the night or overtime mix before the evening shift starts.</li><li><strong>Payments:</strong> contactless cards and mobile wallets cover everyone. No apps, no accounts.</li><li><strong>Meal allowances:</strong> where contractors subsidize meals or hydration, link the allowance to a worker badge or payroll account — a single tap applies the credit and any difference is charged to the worker’s card.</li><li><strong>PPE availability:</strong> treat safety gear like a promise. Running out of gloves or dust masks costs the unit credibility with site managers faster than any other stockout.</li><li><strong>Weather rotation:</strong> use the unit’s sales data to shift the mix as temperatures change; hydration-heavy in summer, warm and high-calorie in winter.</li><li><strong>Food safety:</strong> for anything chilled, use certified refrigerated units, log temperatures, and enforce date labels.</li></ul>
+
+      <!-- ===== 成功标准 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-chart-line text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">What success looks like</h2></div>
+      <p class="mb-6 leading-7 text-gray-600">A construction unit earns its keep two ways: direct sales and recovered productivity. The sales number matters, but so do the metrics that tell you whether the unit has become part of site operations:</p>
+      <div class="mb-8 overflow-x-auto"><table class="data-table"><thead><tr><th>Metric</th><th>What it signals</th></tr></thead><tbody><tr><td><strong>Transactions per shift</strong></td><td>Night and overtime coverage is the key benchmark — this is the demand nobody else serves.</td></tr><tr><td><strong>Off-site food trips avoided</strong></td><td>The productivity return. Even a few prevented trips a day can outvalue the unit’s own P&L.</td></tr><tr><td><strong>PPE and essentials availability</strong></td><td>A stockout here costs more than the item’s margin — it costs site-management trust.</td></tr><tr><td><strong>Items per transaction</strong></td><td>The fuel-combo metric; two to three items per visit is a strong signal.</td></tr><tr><td><strong>Waste percentage</strong></td><td>Keep it low by rotating around shift and weather data rather than a fixed mix.</td></tr></tbody></table></div>
+
+      <!-- ===== 常见错误 ===== -->
+      <div class="mb-5 mt-14 flex items-center gap-3"><span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary"><i class="fa-solid fa-triangle-exclamation text-sm"></i></span><h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Common mistakes to avoid</h2></div>
+      <ul class="mb-8 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li><strong>Stocking for the day shift only.</strong> If crews work nights or weekends, their preferences must drive at least half the mix.</li><li><strong>Ignoring heat and hydration.</strong> On a hot site, water and electrolytes are not optional — they are the traffic engine.</li><li><strong>Skipping the safety-gear section.</strong> The unit that stocks gloves and masks becomes indispensable; the one that does not is just another snack machine.</li><li><strong>Restocking during peak breaks.</strong> Blocking the unit at 12:30 PM costs sales exactly when demand peaks.</li><li><strong>Forgetting the GC partnership.</strong> Placement, power, and compliance should be agreed in writing with the general contractor before installation.</li></ul>
+
+      <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
+      <h2 class="mb-6 text-2xl font-extrabold tracking-tight text-gray-900">Frequently asked questions</h2>
+      <div class="mx-auto max-w-3xl space-y-3"><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Where does the unit go on a construction site?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Inside or beside the site office or break trailer is the anchor — power exists there and the unit stays clean. Locker areas and entrance points are strong secondary spots.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">What sells best on a construction site?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Water and sports drinks drive daily traffic; jerky, protein bars, and microwaveable meals drive revenue; gloves, glasses, and dust masks add the highest margins.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">How do meal allowances work without slowing down the line?</summary><p class="mt-2 text-sm leading-6 text-gray-600">The cleanest setup links an allowance to a worker badge or payroll account. A single tap applies the credit, and any personal overage is charged to the worker’s card or wallet.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Can the unit help with safety compliance?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Yes. Keeping fresh PPE — gloves, eye protection, masks, earplugs — stocked and accessible gives crews an immediate source, which supports OSHA-style compliance programs.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Who handles restocking and maintenance?</summary><p class="mt-2 text-sm leading-6 text-gray-600">The operator owns stocking, service, and payments. The contractor provides placement, power, and site access.</p></details><details class="card px-5 py-4"><summary class="cursor-pointer select-none font-semibold text-gray-900">Is theft a problem in break trailers?</summary><p class="mt-2 text-sm leading-6 text-gray-600">Enclosed cabinets with automatic item detection keep shrinkage near zero, even with multiple crews and high turnover.</p></details></div>
+    </section>
+      </article>
+
+
+    <!-- ===== 相关文章区块 ===== -->
+      <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center">
+        <p class="text-sm font-bold uppercase tracking-widest text-primary">Keep reading</p>
+        <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Related articles</h2>
+      </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"><a href="../knowledge/what-is-ai-vending.html" class="article-card group block overflow-hidden">
+      <div class="thumb">
+        <img src="../assets/images/shared/ai-vending-machine-glass-door-1d4fac.webp" alt="What Is AI Vending?" loading="lazy" />
+      </div>
+      <div class="body">
+        <span class="chip">Knowledge Base</span>
+        <h3>What Is AI Vending?</h3>
+        <p class="summary">AI vending is unattended retail where computer vision (or smart lockers) identifies what a customer takes and charges automatically. No dials, coils, or cash drawers.</p>
+        <p class="meta">Updated August 2026 · 6 min read</p>
+      </div>
+    </a><a href="../knowledge/what-is-smart-retail.html" class="article-card group block overflow-hidden">
+      <div class="thumb">
+        <img src="../assets/images/shared/smart-retail-store-sensors-621e0e.webp" alt="What Is Smart Retail?" loading="lazy" />
+      </div>
+      <div class="body">
+        <span class="chip">Knowledge Base</span>
+        <h3>What Is Smart Retail?</h3>
+        <p class="summary">Smart retail uses technology to automate, measure, and personalize physical commerce. AI vending is one of its fastest-growing formats.</p>
+        <p class="meta">Updated August 2026 · 6 min read</p>
+      </div>
+    </a><a href="../knowledge/what-is-computer-vision.html" class="article-card group block overflow-hidden">
+      <div class="thumb">
+        <img src="../assets/images/shared/computer-vision-retail-shelf-camera-a5eed2.webp" alt="What Is Computer Vision in Retail?" loading="lazy" />
+      </div>
+      <div class="body">
+        <span class="chip">Knowledge Base</span>
+        <h3>What Is Computer Vision in Retail?</h3>
+        <p class="summary">Computer vision lets cameras identify products and actions. In retail it powers checkout-free stores, AI vending, loss prevention, and shelf analytics.</p>
+        <p class="meta">Updated August 2026 · 6 min read</p>
+      </div>
+    </a></div>
+      </section>
+    
+    <!-- ===== 转化 CTA 区块 ===== -->
+    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-3xl bg-[#0b1220] px-6 py-12 sm:px-10 lg:px-14 lg:py-14">
+        <div class="grid-pattern absolute inset-0 opacity-40"></div>
+        <div class="relative grid items-center gap-7 lg:grid-cols-[1.15fr_auto]">
+          <div>
+            <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-blue-300">Venue planning</p>
+            <h2 class="mt-2.5 max-w-xl text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl">Deploying AI vending on a construction site?</h2>
+            <p class="mt-2.5 max-w-xl text-sm leading-6 text-gray-300 sm:text-[0.95rem]">Tell us about your space — we'll help you plan products, placement, and rollout.</p>
+          </div>
+          <div class="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
+            <button type="button" data-open-modal class="btn-white !py-3"><i class="fa-solid fa-calendar-check"></i> Book a Demo</button>
+            <a href="../deployment-guides/" class="btn-light-outline">All venue guides <i class="fa-solid fa-arrow-right text-xs"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+<!-- ===== 页脚（全站公共组件，由 include.js 注入 components/footer.html）===== -->
+  <div id="footer-placeholder"></div>
+<!-- ===== Lead 弹窗（全站公共组件，由 include.js 注入 components/lead-modal.html）===== -->
+  <div id="lead-modal-placeholder"></div>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+  <script src="../assets/js/include.js" defer></script>
+  <script src="../assets/js/modal.js" defer></script>
+  <script src="../assets/js/forms.js" defer></script>
+  
+</body>
+</html>

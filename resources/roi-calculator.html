@@ -66,30 +66,39 @@
       <span class="chip mt-6">Resource</span>
       <h1 class="mt-3 text-4xl font-extrabold tracking-tight text-gray-900">AI Vending ROI Calculator</h1>
       <p class="mt-5 text-lg leading-8 text-gray-600">Adjust machines, transactions, order value, margin, and costs to estimate monthly profit and payback for an AI vending deployment.</p>
-      <img src="../assets/images/shared/roi-calculator-analytics-1d232d.webp" alt="AI Vending ROI Calculator" class="content-img" />
-      <div class="mt-6"><!-- ===== ROI 计算器：滑块调整参数，实时计算（逻辑在 assets/js/roi-calculator.js）===== -->
-      <div class="grid gap-6 md:grid-cols-2">
+
+      <div class="mt-6"><!-- ===== ROI 计算器：流量/转化/客单价驱动，实时计算（逻辑在 assets/js/roi-calculator.js）===== -->
+      <div class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div class="card p-6 space-y-5">
           <h2 class="text-xl font-extrabold text-gray-900">Your assumptions</h2>
           <div>
-            <label class="field-label" for="roi-machines">Machines: <span id="roi-machines-val" class="text-blue-600">3</span></label>
-            <input id="roi-machines" type="range" min="1" max="20" value="3" class="w-full" />
+            <label class="field-label" for="roi-machines">Machines: <span id="roi-machines-val" class="text-blue-600">1</span></label>
+            <input id="roi-machines" type="range" min="1" max="20" value="1" class="w-full" />
           </div>
           <div>
-            <label class="field-label" for="roi-orders">Transactions / machine / day: <span id="roi-orders-val" class="text-blue-600">30</span></label>
-            <input id="roi-orders" type="range" min="5" max="100" value="30" class="w-full" />
+            <label class="field-label" for="roi-traffic">Daily foot traffic (people): <span id="roi-traffic-val" class="text-blue-600">300</span></label>
+            <input id="roi-traffic" type="range" min="50" max="2000" step="10" value="300" class="w-full" />
+          </div>
+          <div>
+            <label class="field-label" for="roi-conversion">Conversion rate: <span id="roi-conversion-val" class="text-blue-600">5%</span></label>
+            <input id="roi-conversion" type="range" min="1" max="25" step="0.5" value="5" class="w-full" />
           </div>
           <div>
             <label class="field-label" for="roi-aov">Average order value: <span id="roi-aov-val" class="text-blue-600">$6</span></label>
-            <input id="roi-aov" type="range" min="1" max="20" value="6" class="w-full" />
+            <input id="roi-aov" type="range" min="2" max="20" step="0.5" value="6" class="w-full" />
           </div>
           <div>
-            <label class="field-label" for="roi-margin">Gross margin: <span id="roi-margin-val" class="text-blue-600">40%</span></label>
-            <input id="roi-margin" type="range" min="10" max="80" value="40" class="w-full" />
+            <label class="field-label" for="roi-margin">Gross margin: <span id="roi-margin-val" class="text-blue-600">45%</span></label>
+            <input id="roi-margin" type="range" min="20" max="70" value="45" class="w-full" />
           </div>
           <div>
-            <label class="field-label" for="roi-cost">Monthly cost / machine: <span id="roi-cost-val" class="text-blue-600">$150</span></label>
-            <input id="roi-cost" type="range" min="0" max="500" value="150" class="w-full" />
+            <label class="field-label" for="roi-fixed-cost">Monthly fixed cost / machine: <span id="roi-fixed-cost-val" class="text-blue-600">$50</span></label>
+            <input id="roi-fixed-cost" type="range" min="0" max="150" step="5" value="50" class="w-full" />
+            <p class="mt-1 text-xs text-gray-400">Software, connectivity, and payment hardware combined.</p>
+          </div>
+          <div>
+            <label class="field-label" for="roi-tx-rate">Payment processing rate: <span id="roi-tx-rate-val" class="text-blue-600">5.95%</span></label>
+            <input id="roi-tx-rate" type="range" min="0" max="10" step="0.05" value="5.95" class="w-full" />
           </div>
           <div>
             <label class="field-label" for="roi-device-price">Device price / machine: <span id="roi-device-price-val" class="text-blue-600">$10,000</span></label>
@@ -99,20 +108,23 @@
         <div class="card p-6">
           <h2 class="text-xl font-extrabold text-gray-900">Estimated results</h2>
           <dl class="mt-5 space-y-4">
+            <div class="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"><dt class="text-sm text-gray-600">Daily transactions</dt><dd id="roi-out-transactions" class="text-xl font-extrabold text-gray-900">15</dd></div>
             <div class="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"><dt class="text-sm text-gray-600">Monthly revenue</dt><dd id="roi-out-revenue" class="text-xl font-extrabold text-gray-900">$0</dd></div>
-            <div class="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"><dt class="text-sm text-gray-600">Monthly gross profit</dt><dd id="roi-out-gross" class="text-xl font-extrabold text-gray-900">$0</dd></div>
             <div class="flex items-center justify-between rounded-xl bg-blue-50 px-4 py-3"><dt class="text-sm font-semibold text-blue-900">Monthly net profit</dt><dd id="roi-out-net" class="text-xl font-extrabold text-blue-700">$0</dd></div>
             <div class="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"><dt class="text-sm text-gray-600">Payback period</dt><dd id="roi-out-payback" class="text-xl font-extrabold text-gray-900">N/A</dd></div>
+            <div class="flex items-center justify-between rounded-xl bg-gray-50 px-4 py-3"><dt class="text-sm text-gray-600">Total upfront (CapEx)</dt><dd id="roi-out-capex" class="text-xl font-extrabold text-gray-900">$0</dd></div>
           </dl>
-          <button type="button" data-open-modal class="btn-primary mt-6 w-full">Get a detailed quote</button>
+          <p class="mt-4 rounded-xl bg-gray-50 px-4 py-2 text-xs leading-5 text-gray-500">Monthly fees: <span id="roi-out-fees" class="font-semibold text-gray-700">$0</span> fixed + <span id="roi-out-fees-tx" class="font-semibold text-gray-700">$0</span> processing</p>
+          <button type="button" data-open-modal class="btn-primary mt-5 w-full">Get a detailed quote</button>
           <p class="mt-3 text-xs text-gray-400">Estimate only. Real results depend on location, product mix, spoilage, and operating costs.</p>
         </div>
-      </div><h2 id="how-to-use-this-calculator" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">How to use this calculator</h2>
-<ol class="mb-5 list-decimal space-y-2 pl-6 leading-7 text-gray-600"><li class='mb-2'>Set the number of machines and expected transactions per machine per day.</li><li class='mb-2'>Enter average order value and gross margin.</li><li class='mb-2'>Add monthly operating costs per machine.</li><li class='mb-2'>Compare the payback period against your target.</li></ol>
-<h2 id="what-the-numbers-mean" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">What the numbers mean</h2>
-<ul class="mb-5 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li>Gross profit is revenue times margin, before operating costs.</li><li>Net profit subtracts monthly costs per machine.</li><li>Payback is the device price divided by monthly net profit.</li></ul>
-<h2 id="reality-checks" class="mb-4 mt-10 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Reality checks</h2>
-<div class="mb-5 rounded-xl border-l-4 border-blue-500 bg-blue-50 px-4 py-3 text-sm leading-6 text-gray-700"><i class="fa-solid fa-circle-info mr-2 text-blue-500"></i>Estimates assume stable traffic and no major downtime. Real results depend on location, spoilage, theft, and restocking efficiency. Run a pilot before trusting the model.</div>
+      </div>
+      <h2 id="how-to-use-this-calculator" class="mb-4 mt-12 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">How to use this calculator</h2>
+      <ol class="mb-5 list-decimal space-y-2 pl-6 leading-7 text-gray-600"><li class='mb-2'>Set the number of machines and estimate the daily foot traffic each one sees.</li><li class='mb-2'>Enter a conversion rate (the share of passersby who buy) and an average order value.</li><li class='mb-2'>Add your gross margin and the monthly fixed cost per machine (software, connectivity, payment hardware).</li><li class='mb-2'>Set the payment processing rate and device price, then read the payback period against your target.</li></ol>
+      <h2 id="what-the-numbers-mean" class="mb-4 mt-12 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">What the numbers mean</h2>
+      <ul class="mb-5 list-disc space-y-2 pl-6 leading-7 text-gray-600"><li>Daily transactions = daily foot traffic × conversion rate.</li><li>Monthly revenue = daily transactions × average order value × 30.</li><li>Monthly net profit = gross profit (revenue × margin) minus fixed fees and payment processing fees.</li><li>Payback = total device cost ÷ monthly net profit, in months.</li></ul>
+      <h2 id="reality-checks" class="mb-4 mt-12 scroll-mt-24 text-2xl font-extrabold tracking-tight text-gray-900">Reality checks</h2>
+      <div class="mb-5 rounded-xl border-l-4 border-blue-500 bg-blue-50 px-4 py-3 text-sm leading-6 text-gray-700"><i class="fa-solid fa-circle-info mr-2 text-blue-500"></i>Estimates assume stable traffic and no major downtime. Real results depend on location, spoilage, theft, and restocking efficiency. Run a pilot before trusting the model.</div>
 </div>
     </article>
     <section class="mx-auto max-w-3xl px-4 pb-16 sm:px-6">
