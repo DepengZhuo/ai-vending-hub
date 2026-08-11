@@ -14,3 +14,7 @@ Desktop.ini
 # 本地 API Key（绝不上传）
 work/ark_key.txt
 work/ark_model.txt
+
+# Python cache
+__pycache__/
+*.pyc
