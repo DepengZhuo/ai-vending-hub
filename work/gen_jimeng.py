@@ -134,7 +134,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--sample", type=int, default=0, help="只生成前 N 张样图")
     ap.add_argument("--model", default="", help="模型ID或推理接入点 ep-xxx")
-    ap.add_argument("--size", default="2K")
+    ap.add_argument("--size", default="2560x1600", help="生成尺寸(建议 2560x1600 = 16:10)")
     ap.add_argument("--seed", type=int, default=7)
     ap.add_argument("--workers", type=int, default=3)
     args = ap.parse_args()
