@@ -49,8 +49,8 @@ const FALLBACK_NAV = `<!-- =====================================================
 
     <!-- Brand -->
     <a href="/" class="flex shrink-0 items-center gap-2.5" aria-label="AI Vending Hub home">
-      <span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary text-white shadow-[0_6px_18px_rgba(22,93,255,0.35)]">
-        <i class="fa-solid fa-cube"></i>
+            <span class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-[10px]" style="width:36px;height:36px">
+        <img src="/assets/images/vending-machine.svg" alt="AI Vending Hub logo" class="h-full w-full object-contain" style="width:36px;height:36px;object-fit:contain" />
       </span>
       <span class="text-lg font-bold tracking-tight text-gray-900">AI Vending Hub</span>
     </a>
@@ -147,8 +147,8 @@ const FALLBACK_FOOTER = `<!-- ==================================================
     <div class="grid items-end gap-8 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
       <div>
         <a href="/" class="flex items-center gap-2.5" aria-label="AI Vending Hub home">
-          <span class="flex h-9 w-9 items-center justify-center rounded-[10px] bg-primary text-white">
-            <i class="fa-solid fa-cube"></i>
+                    <span class="flex h-9 w-9 items-center justify-center overflow-hidden rounded-[10px]" style="width:36px;height:36px">
+            <img src="/assets/images/vending-machine.svg" alt="AI Vending Hub logo" class="h-full w-full object-contain" style="width:36px;height:36px;object-fit:contain" />
           </span>
           <span class="text-lg font-bold text-white">AI Vending Hub</span>
         </a>
