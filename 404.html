@@ -1,92 +1,147 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found</title>
+  <title>Page not found ? AI Vending Hub</title>
   <meta name="description" content="The page you're looking for doesn't exist." />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Page not found" />
-  <meta property="og:description" content="The page you're looking for doesn't exist." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-  /* 全站色板：参考方案配色（primary #165dff / accent #10b981 / slate 灰阶） */
-  if (window.tailwind) {
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: { DEFAULT: "#165dff", dark: "#1249cc" },
-            accent: "#165dff",
-            blue: {
-              50: "#eef4ff",
-              100: "#dbe7ff",
-              200: "#bfd3ff",
-              300: "#8fb0ff",
-              400: "#4f82ff",
-              500: "#165dff",
-              600: "#1249cc",
-              700: "#0b2f8a",
-              800: "#0a245f",
-              900: "#081a42",
-            },
-            gray: {
-              50: "#f8fafc",
-              100: "#f1f5f9",
-              200: "#e2e8f0",
-              300: "#cbd5e1",
-              400: "#94a3b8",
-              500: "#64748b",
-              600: "#475569",
-              700: "#334155",
-              800: "#1e293b",
-              900: "#0f172a",
-            },
-          },
-        },
-      },
-    };
-  }
-</script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script type="application/ld+json">{"@type": "WebPage", "name": "404"}</script>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: "Geist Mono:SemiBold";
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url("https://static.figma.com/font/GeistMono_wght__1") format("woff2");
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      min-height: 100svh;
+      background: #000;
+      color: #fff;
+      font-family: "Geist Mono:SemiBold", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    .page {
+      position: relative;
+      min-height: 100svh;
+      overflow: hidden;
+    }
+    /* Background video: lowest layer, full bleed, no overlay */
+    .bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 1;
+    }
+    /* Brand: white AI Vending Hub mark + logotype, centered top */
+    .brand {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 233px;
+      height: 40px;
+      z-index: 2;
+    }
+    .brand .mark { width: 54px; height: 40px; flex: none; display: block; }
+    .brand .logotype {
+      font-family: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+      color: #fff;
+      line-height: 1;
+    }
+    /* Centered 404 content */
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 483px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 44px;
+      z-index: 2;
+    }
+    .center h1 {
+      font-family: "Geist Mono:SemiBold", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 295.751px;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -24.6459px;
+      text-align: center;
+      background: linear-gradient(247.3282658084845deg, rgb(255, 255, 255) 2.5334%, rgba(255, 255, 255, 0.4) 93.612%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      height: auto;
+      min-height: 0;
+      padding-bottom: 0.12em;
+      margin-left: 24px; /* balance the negative letter-spacing on the trailing digit */
+    }
+    .divider { width: 425px; max-width: 100%; height: 1px; background: #fff; }
+    .message {
+      font-family: "Geist Mono:SemiBold", "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      color: #fff;
+    }
+    @media (max-width: 640px) {
+      .brand { top: 32px; transform: translateX(-50%) scale(0.75); }
+      .center { width: min(100% - 40px, 360px); gap: 28px; }
+      .center h1 {
+        font-size: clamp(140px, 52vw, 200px);
+        letter-spacing: -0.09em;
+        margin-left: 8px;
+      }
+      .divider { width: 100%; }
+      .message { font-size: clamp(16px, 4.5vw, 20px); letter-spacing: -1.3px; }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 antialiased" data-root="">
-<!-- ===== 导航栏（全站公共组件，由 assets/js/include.js 注入 components/nav.html）===== -->
-  <div id="nav-placeholder"></div>
-  <main>
+<body>
+  <main class="page">
+    <!-- Background video -->
+    <video class="bg-video" autoplay loop muted playsinline aria-hidden="true">
+      <source src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260801_001207_ec20d138-aa45-4b2b-ab8c-bdc71607f240.mp4" type="video/mp4" />
+    </video>
 
-    <section class="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
-      <p class="text-6xl font-extrabold text-blue-600">404</p>
-      <h1 class="mt-4 text-3xl font-extrabold text-gray-900">Page not found</h1>
-      <p class="mt-3 text-gray-600">Try a search, or jump back to a popular section.</p>
-      <div class="relative mx-auto mt-8 max-w-md">
-        <input id="site-search" type="search" placeholder="Search the site..." class="field-input pr-10" />
-        <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
-        <div id="search-results" class="card absolute left-0 right-0 top-12 z-10 hidden text-left"></div>
-      </div>
-      <div class="mt-10 flex flex-wrap justify-center gap-3">
-        <a href="index.html" class="btn-primary">Home</a>
-        <a href="knowledge/" class="btn-outline">Knowledge Base</a>
-        <a href="companies/" class="btn-outline">Companies</a>
-        <a href="resources/" class="btn-outline">Resources</a>
-      </div>
-    </section>
+    <!-- Brand -->
+    <div class="brand" aria-label="AI Vending Hub">
+      <svg class="mark" viewBox="0 0 54 40" fill="none" aria-hidden="true">
+        <g transform="translate(7 5.1) scale(0.078)" fill="#fff">
+          <path d="M234.41 114.77c45.59-19.79 91.17-39.59 136.76-59.39 6.36-2.76 13.39-2.76 19.75 0 45.59 19.79 91.17 39.59 136.76 59.39 8.02 3.48 13.14 11.35 13.14 20.12v99.12c0 21.85-17.7 39.55-39.55 39.55-6.39 0-12.7-1.55-18.4-4.5-40.09-20.76-80.18-41.52-120.27-62.28-6.36-3.3-13.39-3.3-19.75 0-40.09 20.76-80.18 41.52-120.27 62.28-5.7 2.95-12.01 4.5-18.4 4.5C17.7 273.55 0 255.85 0 234V134.88c0-8.76 5.12-16.63 13.14-20.12 20.13-8.74 40.25-17.47 60.37-26.21 25.44-11.04 50.88-22.08 76.32-33.12 20.13-8.74 40.25-17.47 60.37-26.21 7.74-3.36 16.2-3.36 23.94 0 6.36 2.76 13.39 2.76 19.75 0l.52-.21zM447.7 229.23c5.7 2.95 12.01 4.5 18.4 4.5 21.85 0 39.55-17.7 39.55-39.55v-99.12c0-8.76-5.12-16.63-13.14-20.12-40.09-17.4-80.18-34.81-120.27-52.21-7.74-3.36-16.2-3.36-23.94 0-6.36 2.76-13.39 2.76-19.75 0-45.59 19.79-91.17 39.59-136.76 59.39-20.13 8.74-40.25 17.47-60.37 26.21l-.52.21c-13.54 5.88-28.62 4.94-41.38-2.23C120.12 197.77 75.19 217.55 30.3 237.33c-8.02 3.48-13.14 11.35-13.14 20.12v99.12C17.16 378.42 34.86 396.12 56.71 396.12c6.39 0 12.7-1.55 18.4-4.5 40.09-20.76 80.18-41.52 120.27-62.28 6.36-3.3 13.39-3.3 19.75 0 40.09 20.76 80.18 41.52 120.27 62.28 5.7 2.95 12.01 4.5 18.4 4.5 21.85 0 39.55-17.7 39.55-39.55v-99.12c0-8.76-5.12-16.63-13.14-20.12-20.13-8.74-40.25-17.47-60.37-26.21-25.44-11.04-50.88-22.08-76.32-33.12-20.13-8.74-40.25-17.47-60.37-26.21-7.74-3.36-16.2-3.36-23.94 0-6.36-2.76-13.39-2.76-19.75 0l-.52.21z"/>
+        </g>
+      </svg>
+      <span class="logotype">AI Vending Hub</span>
+    </div>
 
+    <!-- Centered 404 content -->
+    <div class="center">
+      <h1>404</h1>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="message">The path may be broken, but the journey isn't. Let's get you back.</p>
+    </div>
   </main>
-<!-- ===== 页脚（全站公共组件，由 include.js 注入 components/footer.html）===== -->
-  <div id="footer-placeholder"></div>
-<!-- ===== Lead 弹窗（全站公共组件，由 include.js 注入 components/lead-modal.html）===== -->
-  <div id="lead-modal-placeholder"></div>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-  <script src="assets/js/include.js" defer></script>
-  <script src="assets/js/modal.js" defer></script>
-  <script src="assets/js/forms.js" defer></script>
-  <script src="assets/js/search.js" defer></script>
 </body>
 </html>
