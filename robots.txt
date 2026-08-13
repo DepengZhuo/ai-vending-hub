@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://depengzhuo.github.io/ai-vending-hub/sitemap.xml
+Sitemap: https://aivendinginsight.com/sitemap.xml

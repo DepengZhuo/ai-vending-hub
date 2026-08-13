@@ -19,15 +19,14 @@ HEADER = """/* ============================================================
       the page placeholders (#nav-placeholder, etc.).
    3) Emits "components-injected" when all three are in place.
    4) Marks the current section in the nav.
-   5) Generates the canonical link from SITE_CONFIG.domain.
-   6) Local preview fallback: when double-clicked via file:// the browser
+   5) Local preview fallback: when double-clicked via file:// the browser
       blocks fetch(), so the built-in FALLBACK_* strings are used instead.
    NOTE: the FALLBACK_* strings are regenerated from components/*.html by
    work/sync_components.py — keep that script and these files in sync.
    ============================================================ */
 
 const SITE_CONFIG = {
-  domain: "https://depengzhuo.github.io/ai-vending-hub", // 上线地址；以后绑定自定义域名时替换
+  domain: "https://aivendinginsight.com", // 上线地址；以后绑定自定义域名时替换
 };
 
 /* ========== Local preview fallbacks (keep in sync with components/) ========== */
@@ -140,12 +139,6 @@ const FALLBACK_MODAL = `__MODAL__`;
       }
     });
   }
-
-  /* Automatic canonical (domain set once in SITE_CONFIG). */
-  const canonical = document.createElement("link");
-  canonical.rel = "canonical";
-  canonical.href = SITE_CONFIG.domain + location.pathname;
-  document.head.appendChild(canonical);
 
   /* Rewrite static links on the page itself (file:// only). */
   fixDirectoryLinks(document);

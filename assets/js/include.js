@@ -6,14 +6,14 @@
       the page placeholders (#nav-placeholder, etc.).
    3) Emits "components-injected" when all three are in place.
    4) Marks the current section in the nav.
-    6) Local preview fallback: when double-clicked via file:// the browser
+   5) Local preview fallback: when double-clicked via file:// the browser
       blocks fetch(), so the built-in FALLBACK_* strings are used instead.
    NOTE: the FALLBACK_* strings are regenerated from components/*.html by
    work/sync_components.py — keep that script and these files in sync.
    ============================================================ */
 
 const SITE_CONFIG = {
-  domain: "https://depengzhuo.github.io/ai-vending-hub", // 上线地址；以后绑定自定义域名时替换
+  domain: "https://aivendinginsight.com", // 上线地址；以后绑定自定义域名时替换
 };
 
 /* ========== Local preview fallbacks (keep in sync with components/) ========== */
