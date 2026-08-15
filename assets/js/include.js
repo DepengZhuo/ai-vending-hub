@@ -221,6 +221,9 @@ const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden it
       <i class="fa-solid fa-xmark text-lg"></i>
     </button>
 
+    <!-- ===== 表单视图（提交成功后切换到下方成功视图） ===== -->
+    <div data-lead-form-view>
+
     <span class="chip">Talk to us</span>
     <h2 class="mt-2.5 text-xl font-extrabold tracking-tight text-gray-900 sm:text-2xl">Book a Demo</h2>
     <p class="mt-1.5 text-sm leading-6 text-gray-600">
@@ -288,6 +291,16 @@ const FALLBACK_MODAL = `<div id="lead-modal" class="fixed inset-0 z-50 hidden it
         <span><i class="fa-solid fa-lock"></i> We never sell your data</span>
       </div>
     </form>
+
+    </div>
+
+    <!-- ===== 提交成功视图：仅显示 Submitted ===== -->
+    <div data-lead-success-view class="hidden py-10 text-center">
+      <span class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-50">
+        <i class="fa-solid fa-check text-3xl text-green-500"></i>
+      </span>
+      <h2 class="mt-4 text-2xl font-extrabold tracking-tight text-gray-900">Submitted</h2>
+    </div>
   </div>
 </div>`;
 
